@@ -1,0 +1,1497 @@
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: Building multi voltage information for entire design. (MV-022)
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-slack_lesser_than 1000.00
+	-max_paths 20
+	-sort_by slack
+Design : gpu_top
+Version: W-2024.09-SP2
+Date   : Wed Mar 11 16:19:18 2026
+****************************************
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[0][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108672/Y (NAND2X1)                                     0.17       0.77 f
+  g108228/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107663__4319/Y (AOI221X1)                              0.05       0.89 f
+  g107377__7410/Y (NAND3X4)                               0.12       1.00 r
+  FE_DBTC42_n_6475/Y (INVX1)                              0.15       1.15 f
+  lanes_lane0_mul_69_34_g4013/Y (NOR2X1)                  0.14       1.30 r
+  lanes_lane0_mul_69_34_g3888/CO (ADDFX1)                 0.21       1.50 r
+  lanes_lane0_mul_69_34_g3823/CO (ADDFX1)                 0.19       1.69 r
+  lanes_lane0_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.87 r
+  lanes_lane0_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.06 r
+  lanes_lane0_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.24 r
+  lanes_lane0_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.43 r
+  lanes_lane0_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.61 r
+  lanes_lane0_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.80 r
+  lanes_lane0_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.98 r
+  lanes_lane0_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.17 r
+  lanes_lane0_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.35 r
+  lanes_lane0_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.54 r
+  lanes_lane0_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.72 r
+  lanes_lane0_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.91 r
+  lanes_lane0_mul_69_34_g3658/Y (NAND2X1)                 0.12       4.03 f
+  lanes_lane0_mul_69_34_g3652/Y (OAI21X1)                 0.12       4.15 r
+  lanes_lane0_mul_69_34_g3640/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane0_mul_69_34_g3629/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane0_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.87 r
+  lanes_lane0_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane0_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane0_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane0_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane0_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane0_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane0_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane0_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane0_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane0_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane0_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane0_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane0_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane0_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane0_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane0_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g155260/Y (AOI21X1)                                     0.15       8.07 f
+  g154487/Y (OAI22X1)                                     0.20       8.27 r
+  regfile_bank0_reg[0][31]/D (DFFHQX1)                    0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank0_reg[0][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.27
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.57
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[4][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108672/Y (NAND2X1)                                     0.17       0.77 f
+  g108228/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107663__4319/Y (AOI221X1)                              0.05       0.89 f
+  g107377__7410/Y (NAND3X4)                               0.12       1.00 r
+  FE_DBTC42_n_6475/Y (INVX1)                              0.15       1.15 f
+  lanes_lane0_mul_69_34_g4013/Y (NOR2X1)                  0.14       1.30 r
+  lanes_lane0_mul_69_34_g3888/CO (ADDFX1)                 0.21       1.50 r
+  lanes_lane0_mul_69_34_g3823/CO (ADDFX1)                 0.19       1.69 r
+  lanes_lane0_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.87 r
+  lanes_lane0_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.06 r
+  lanes_lane0_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.24 r
+  lanes_lane0_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.43 r
+  lanes_lane0_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.61 r
+  lanes_lane0_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.80 r
+  lanes_lane0_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.98 r
+  lanes_lane0_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.17 r
+  lanes_lane0_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.35 r
+  lanes_lane0_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.54 r
+  lanes_lane0_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.72 r
+  lanes_lane0_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.91 r
+  lanes_lane0_mul_69_34_g3658/Y (NAND2X1)                 0.12       4.03 f
+  lanes_lane0_mul_69_34_g3652/Y (OAI21X1)                 0.12       4.15 r
+  lanes_lane0_mul_69_34_g3640/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane0_mul_69_34_g3629/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane0_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.87 r
+  lanes_lane0_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane0_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane0_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane0_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane0_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane0_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane0_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane0_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane0_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane0_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane0_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane0_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane0_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane0_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane0_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane0_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g155260/Y (AOI21X1)                                     0.15       8.07 f
+  g154504/Y (OAI22X1)                                     0.20       8.27 r
+  regfile_bank0_reg[4][31]/D (DFFHQX1)                    0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank0_reg[4][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.27
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.57
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[5][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108672/Y (NAND2X1)                                     0.17       0.77 f
+  g108228/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107663__4319/Y (AOI221X1)                              0.05       0.89 f
+  g107377__7410/Y (NAND3X4)                               0.12       1.00 r
+  FE_DBTC42_n_6475/Y (INVX1)                              0.15       1.15 f
+  lanes_lane0_mul_69_34_g4013/Y (NOR2X1)                  0.14       1.30 r
+  lanes_lane0_mul_69_34_g3888/CO (ADDFX1)                 0.21       1.50 r
+  lanes_lane0_mul_69_34_g3823/CO (ADDFX1)                 0.19       1.69 r
+  lanes_lane0_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.87 r
+  lanes_lane0_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.06 r
+  lanes_lane0_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.24 r
+  lanes_lane0_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.43 r
+  lanes_lane0_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.61 r
+  lanes_lane0_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.80 r
+  lanes_lane0_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.98 r
+  lanes_lane0_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.17 r
+  lanes_lane0_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.35 r
+  lanes_lane0_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.54 r
+  lanes_lane0_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.72 r
+  lanes_lane0_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.91 r
+  lanes_lane0_mul_69_34_g3658/Y (NAND2X1)                 0.12       4.03 f
+  lanes_lane0_mul_69_34_g3652/Y (OAI21X1)                 0.12       4.15 r
+  lanes_lane0_mul_69_34_g3640/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane0_mul_69_34_g3629/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane0_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.87 r
+  lanes_lane0_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane0_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane0_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane0_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane0_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane0_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane0_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane0_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane0_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane0_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane0_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane0_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane0_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane0_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane0_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane0_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g155260/Y (AOI21X1)                                     0.15       8.07 f
+  g154506/Y (OAI22X1)                                     0.20       8.27 r
+  regfile_bank0_reg[5][31]/D (DFFHQX1)                    0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank0_reg[5][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.27
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.57
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[0][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108686/Y (NAND2X1)                                     0.17       0.77 f
+  g108632/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107724__1617/Y (AOI221X1)                              0.05       0.89 f
+  g107408__2398/Y (NAND3X4)                               0.11       1.00 r
+  FE_DBTC17_n_6411/Y (INVX1)                              0.16       1.16 f
+  lanes_lane2_mul_69_34_g4004/Y (NOR2X1)                  0.16       1.32 r
+  lanes_lane2_mul_69_34_g3865/CO (ADDFX1)                 0.21       1.52 r
+  lanes_lane2_mul_69_34_g3813/CO (ADDFX1)                 0.19       1.71 r
+  lanes_lane2_mul_69_34_g3789/CO (ADDFX1)                 0.19       1.89 r
+  lanes_lane2_mul_69_34_g3768/CO (ADDFX1)                 0.19       2.08 r
+  lanes_lane2_mul_69_34_g3754/CO (ADDFX1)                 0.19       2.26 r
+  lanes_lane2_mul_69_34_g3743/CO (ADDFX1)                 0.19       2.45 r
+  lanes_lane2_mul_69_34_g3732/CO (ADDFX1)                 0.19       2.63 r
+  lanes_lane2_mul_69_34_g3721/CO (ADDFX1)                 0.19       2.82 r
+  lanes_lane2_mul_69_34_g3710/CO (ADDFX1)                 0.19       3.00 r
+  lanes_lane2_mul_69_34_g3699/CO (ADDFX1)                 0.19       3.19 r
+  lanes_lane2_mul_69_34_g3688/CO (ADDFX1)                 0.19       3.37 r
+  lanes_lane2_mul_69_34_g3677/CO (ADDFX1)                 0.19       3.56 r
+  lanes_lane2_mul_69_34_g3666/CO (ADDFX1)                 0.19       3.74 r
+  lanes_lane2_mul_69_34_g3655/CO (ADDFX1)                 0.19       3.93 r
+  lanes_lane2_mul_69_34_g3649/Y (NAND2X1)                 0.11       4.04 f
+  lanes_lane2_mul_69_34_g3643/Y (OAI21X1)                 0.11       4.15 r
+  lanes_lane2_mul_69_34_g3631/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane2_mul_69_34_g3619/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane2_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.86 r
+  lanes_lane2_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane2_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane2_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane2_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane2_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane2_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane2_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane2_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane2_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane2_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane2_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane2_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane2_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane2_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane2_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane2_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g154566/Y (AOI21X1)                                     0.15       8.07 f
+  g153928/Y (OAI22X1)                                     0.20       8.27 r
+  regfile_bank2_reg[0][31]/D (DFFHQX1)                    0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank2_reg[0][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.27
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.58
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[4][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108686/Y (NAND2X1)                                     0.17       0.77 f
+  g108632/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107724__1617/Y (AOI221X1)                              0.05       0.89 f
+  g107408__2398/Y (NAND3X4)                               0.11       1.00 r
+  FE_DBTC17_n_6411/Y (INVX1)                              0.16       1.16 f
+  lanes_lane2_mul_69_34_g4004/Y (NOR2X1)                  0.16       1.32 r
+  lanes_lane2_mul_69_34_g3865/CO (ADDFX1)                 0.21       1.52 r
+  lanes_lane2_mul_69_34_g3813/CO (ADDFX1)                 0.19       1.71 r
+  lanes_lane2_mul_69_34_g3789/CO (ADDFX1)                 0.19       1.89 r
+  lanes_lane2_mul_69_34_g3768/CO (ADDFX1)                 0.19       2.08 r
+  lanes_lane2_mul_69_34_g3754/CO (ADDFX1)                 0.19       2.26 r
+  lanes_lane2_mul_69_34_g3743/CO (ADDFX1)                 0.19       2.45 r
+  lanes_lane2_mul_69_34_g3732/CO (ADDFX1)                 0.19       2.63 r
+  lanes_lane2_mul_69_34_g3721/CO (ADDFX1)                 0.19       2.82 r
+  lanes_lane2_mul_69_34_g3710/CO (ADDFX1)                 0.19       3.00 r
+  lanes_lane2_mul_69_34_g3699/CO (ADDFX1)                 0.19       3.19 r
+  lanes_lane2_mul_69_34_g3688/CO (ADDFX1)                 0.19       3.37 r
+  lanes_lane2_mul_69_34_g3677/CO (ADDFX1)                 0.19       3.56 r
+  lanes_lane2_mul_69_34_g3666/CO (ADDFX1)                 0.19       3.74 r
+  lanes_lane2_mul_69_34_g3655/CO (ADDFX1)                 0.19       3.93 r
+  lanes_lane2_mul_69_34_g3649/Y (NAND2X1)                 0.11       4.04 f
+  lanes_lane2_mul_69_34_g3643/Y (OAI21X1)                 0.11       4.15 r
+  lanes_lane2_mul_69_34_g3631/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane2_mul_69_34_g3619/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane2_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.86 r
+  lanes_lane2_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane2_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane2_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane2_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane2_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane2_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane2_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane2_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane2_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane2_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane2_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane2_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane2_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane2_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane2_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane2_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g154566/Y (AOI21X1)                                     0.15       8.07 f
+  g153942/Y (OAI22X1)                                     0.20       8.27 r
+  regfile_bank2_reg[4][31]/D (DFFHQX1)                    0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank2_reg[4][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.27
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.58
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[5][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108686/Y (NAND2X1)                                     0.17       0.77 f
+  g108632/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107724__1617/Y (AOI221X1)                              0.05       0.89 f
+  g107408__2398/Y (NAND3X4)                               0.11       1.00 r
+  FE_DBTC17_n_6411/Y (INVX1)                              0.16       1.16 f
+  lanes_lane2_mul_69_34_g4004/Y (NOR2X1)                  0.16       1.32 r
+  lanes_lane2_mul_69_34_g3865/CO (ADDFX1)                 0.21       1.52 r
+  lanes_lane2_mul_69_34_g3813/CO (ADDFX1)                 0.19       1.71 r
+  lanes_lane2_mul_69_34_g3789/CO (ADDFX1)                 0.19       1.89 r
+  lanes_lane2_mul_69_34_g3768/CO (ADDFX1)                 0.19       2.08 r
+  lanes_lane2_mul_69_34_g3754/CO (ADDFX1)                 0.19       2.26 r
+  lanes_lane2_mul_69_34_g3743/CO (ADDFX1)                 0.19       2.45 r
+  lanes_lane2_mul_69_34_g3732/CO (ADDFX1)                 0.19       2.63 r
+  lanes_lane2_mul_69_34_g3721/CO (ADDFX1)                 0.19       2.82 r
+  lanes_lane2_mul_69_34_g3710/CO (ADDFX1)                 0.19       3.00 r
+  lanes_lane2_mul_69_34_g3699/CO (ADDFX1)                 0.19       3.19 r
+  lanes_lane2_mul_69_34_g3688/CO (ADDFX1)                 0.19       3.37 r
+  lanes_lane2_mul_69_34_g3677/CO (ADDFX1)                 0.19       3.56 r
+  lanes_lane2_mul_69_34_g3666/CO (ADDFX1)                 0.19       3.74 r
+  lanes_lane2_mul_69_34_g3655/CO (ADDFX1)                 0.19       3.93 r
+  lanes_lane2_mul_69_34_g3649/Y (NAND2X1)                 0.11       4.04 f
+  lanes_lane2_mul_69_34_g3643/Y (OAI21X1)                 0.11       4.15 r
+  lanes_lane2_mul_69_34_g3631/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane2_mul_69_34_g3619/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane2_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.86 r
+  lanes_lane2_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane2_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane2_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane2_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane2_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane2_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane2_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane2_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane2_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane2_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane2_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane2_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane2_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane2_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane2_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane2_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g154566/Y (AOI21X1)                                     0.15       8.07 f
+  g153944/Y (OAI22X1)                                     0.20       8.27 r
+  regfile_bank2_reg[5][31]/D (DFFHQX1)                    0.00       8.27 r
+  data arrival time                                                  8.27
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank2_reg[5][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.27
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.58
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[1][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108672/Y (NAND2X1)                                     0.17       0.77 f
+  g108228/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107663__4319/Y (AOI221X1)                              0.05       0.89 f
+  g107377__7410/Y (NAND3X4)                               0.12       1.00 r
+  FE_DBTC42_n_6475/Y (INVX1)                              0.15       1.15 f
+  lanes_lane0_mul_69_34_g4013/Y (NOR2X1)                  0.14       1.30 r
+  lanes_lane0_mul_69_34_g3888/CO (ADDFX1)                 0.21       1.50 r
+  lanes_lane0_mul_69_34_g3823/CO (ADDFX1)                 0.19       1.69 r
+  lanes_lane0_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.87 r
+  lanes_lane0_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.06 r
+  lanes_lane0_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.24 r
+  lanes_lane0_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.43 r
+  lanes_lane0_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.61 r
+  lanes_lane0_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.80 r
+  lanes_lane0_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.98 r
+  lanes_lane0_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.17 r
+  lanes_lane0_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.35 r
+  lanes_lane0_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.54 r
+  lanes_lane0_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.72 r
+  lanes_lane0_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.91 r
+  lanes_lane0_mul_69_34_g3658/Y (NAND2X1)                 0.12       4.03 f
+  lanes_lane0_mul_69_34_g3652/Y (OAI21X1)                 0.12       4.15 r
+  lanes_lane0_mul_69_34_g3640/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane0_mul_69_34_g3629/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane0_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.87 r
+  lanes_lane0_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane0_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane0_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane0_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane0_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane0_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane0_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane0_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane0_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane0_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane0_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane0_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane0_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane0_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane0_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane0_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g155260/Y (AOI21X1)                                     0.15       8.07 f
+  g154490/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank0_reg[1][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank0_reg[1][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[2][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108672/Y (NAND2X1)                                     0.17       0.77 f
+  g108228/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107663__4319/Y (AOI221X1)                              0.05       0.89 f
+  g107377__7410/Y (NAND3X4)                               0.12       1.00 r
+  FE_DBTC42_n_6475/Y (INVX1)                              0.15       1.15 f
+  lanes_lane0_mul_69_34_g4013/Y (NOR2X1)                  0.14       1.30 r
+  lanes_lane0_mul_69_34_g3888/CO (ADDFX1)                 0.21       1.50 r
+  lanes_lane0_mul_69_34_g3823/CO (ADDFX1)                 0.19       1.69 r
+  lanes_lane0_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.87 r
+  lanes_lane0_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.06 r
+  lanes_lane0_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.24 r
+  lanes_lane0_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.43 r
+  lanes_lane0_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.61 r
+  lanes_lane0_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.80 r
+  lanes_lane0_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.98 r
+  lanes_lane0_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.17 r
+  lanes_lane0_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.35 r
+  lanes_lane0_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.54 r
+  lanes_lane0_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.72 r
+  lanes_lane0_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.91 r
+  lanes_lane0_mul_69_34_g3658/Y (NAND2X1)                 0.12       4.03 f
+  lanes_lane0_mul_69_34_g3652/Y (OAI21X1)                 0.12       4.15 r
+  lanes_lane0_mul_69_34_g3640/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane0_mul_69_34_g3629/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane0_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.87 r
+  lanes_lane0_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane0_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane0_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane0_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane0_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane0_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane0_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane0_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane0_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane0_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane0_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane0_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane0_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane0_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane0_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane0_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g155260/Y (AOI21X1)                                     0.15       8.07 f
+  g154404/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank0_reg[2][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank0_reg[2][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[3][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108672/Y (NAND2X1)                                     0.17       0.77 f
+  g108228/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107663__4319/Y (AOI221X1)                              0.05       0.89 f
+  g107377__7410/Y (NAND3X4)                               0.12       1.00 r
+  FE_DBTC42_n_6475/Y (INVX1)                              0.15       1.15 f
+  lanes_lane0_mul_69_34_g4013/Y (NOR2X1)                  0.14       1.30 r
+  lanes_lane0_mul_69_34_g3888/CO (ADDFX1)                 0.21       1.50 r
+  lanes_lane0_mul_69_34_g3823/CO (ADDFX1)                 0.19       1.69 r
+  lanes_lane0_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.87 r
+  lanes_lane0_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.06 r
+  lanes_lane0_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.24 r
+  lanes_lane0_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.43 r
+  lanes_lane0_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.61 r
+  lanes_lane0_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.80 r
+  lanes_lane0_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.98 r
+  lanes_lane0_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.17 r
+  lanes_lane0_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.35 r
+  lanes_lane0_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.54 r
+  lanes_lane0_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.72 r
+  lanes_lane0_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.91 r
+  lanes_lane0_mul_69_34_g3658/Y (NAND2X1)                 0.12       4.03 f
+  lanes_lane0_mul_69_34_g3652/Y (OAI21X1)                 0.12       4.15 r
+  lanes_lane0_mul_69_34_g3640/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane0_mul_69_34_g3629/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane0_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.87 r
+  lanes_lane0_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane0_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane0_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane0_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane0_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane0_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane0_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane0_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane0_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane0_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane0_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane0_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane0_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane0_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane0_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane0_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g155260/Y (AOI21X1)                                     0.15       8.07 f
+  g154407/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank0_reg[3][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank0_reg[3][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[6][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108672/Y (NAND2X1)                                     0.17       0.77 f
+  g108228/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107663__4319/Y (AOI221X1)                              0.05       0.89 f
+  g107377__7410/Y (NAND3X4)                               0.12       1.00 r
+  FE_DBTC42_n_6475/Y (INVX1)                              0.15       1.15 f
+  lanes_lane0_mul_69_34_g4013/Y (NOR2X1)                  0.14       1.30 r
+  lanes_lane0_mul_69_34_g3888/CO (ADDFX1)                 0.21       1.50 r
+  lanes_lane0_mul_69_34_g3823/CO (ADDFX1)                 0.19       1.69 r
+  lanes_lane0_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.87 r
+  lanes_lane0_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.06 r
+  lanes_lane0_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.24 r
+  lanes_lane0_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.43 r
+  lanes_lane0_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.61 r
+  lanes_lane0_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.80 r
+  lanes_lane0_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.98 r
+  lanes_lane0_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.17 r
+  lanes_lane0_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.35 r
+  lanes_lane0_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.54 r
+  lanes_lane0_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.72 r
+  lanes_lane0_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.91 r
+  lanes_lane0_mul_69_34_g3658/Y (NAND2X1)                 0.12       4.03 f
+  lanes_lane0_mul_69_34_g3652/Y (OAI21X1)                 0.12       4.15 r
+  lanes_lane0_mul_69_34_g3640/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane0_mul_69_34_g3629/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane0_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.87 r
+  lanes_lane0_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane0_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane0_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane0_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane0_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane0_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane0_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane0_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane0_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane0_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane0_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane0_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane0_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane0_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane0_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane0_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g155260/Y (AOI21X1)                                     0.15       8.07 f
+  g154413/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank0_reg[6][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank0_reg[6][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[7][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108672/Y (NAND2X1)                                     0.17       0.77 f
+  g108228/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107663__4319/Y (AOI221X1)                              0.05       0.89 f
+  g107377__7410/Y (NAND3X4)                               0.12       1.00 r
+  FE_DBTC42_n_6475/Y (INVX1)                              0.15       1.15 f
+  lanes_lane0_mul_69_34_g4013/Y (NOR2X1)                  0.14       1.30 r
+  lanes_lane0_mul_69_34_g3888/CO (ADDFX1)                 0.21       1.50 r
+  lanes_lane0_mul_69_34_g3823/CO (ADDFX1)                 0.19       1.69 r
+  lanes_lane0_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.87 r
+  lanes_lane0_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.06 r
+  lanes_lane0_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.24 r
+  lanes_lane0_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.43 r
+  lanes_lane0_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.61 r
+  lanes_lane0_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.80 r
+  lanes_lane0_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.98 r
+  lanes_lane0_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.17 r
+  lanes_lane0_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.35 r
+  lanes_lane0_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.54 r
+  lanes_lane0_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.72 r
+  lanes_lane0_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.91 r
+  lanes_lane0_mul_69_34_g3658/Y (NAND2X1)                 0.12       4.03 f
+  lanes_lane0_mul_69_34_g3652/Y (OAI21X1)                 0.12       4.15 r
+  lanes_lane0_mul_69_34_g3640/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane0_mul_69_34_g3629/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane0_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.87 r
+  lanes_lane0_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane0_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane0_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane0_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane0_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane0_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane0_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane0_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane0_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane0_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane0_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane0_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane0_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane0_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane0_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane0_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g155260/Y (AOI21X1)                                     0.15       8.07 f
+  g154477/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank0_reg[7][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank0_reg[7][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[1][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108686/Y (NAND2X1)                                     0.17       0.77 f
+  g108632/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107724__1617/Y (AOI221X1)                              0.05       0.89 f
+  g107408__2398/Y (NAND3X4)                               0.11       1.00 r
+  FE_DBTC17_n_6411/Y (INVX1)                              0.16       1.16 f
+  lanes_lane2_mul_69_34_g4004/Y (NOR2X1)                  0.16       1.32 r
+  lanes_lane2_mul_69_34_g3865/CO (ADDFX1)                 0.21       1.52 r
+  lanes_lane2_mul_69_34_g3813/CO (ADDFX1)                 0.19       1.71 r
+  lanes_lane2_mul_69_34_g3789/CO (ADDFX1)                 0.19       1.89 r
+  lanes_lane2_mul_69_34_g3768/CO (ADDFX1)                 0.19       2.08 r
+  lanes_lane2_mul_69_34_g3754/CO (ADDFX1)                 0.19       2.26 r
+  lanes_lane2_mul_69_34_g3743/CO (ADDFX1)                 0.19       2.45 r
+  lanes_lane2_mul_69_34_g3732/CO (ADDFX1)                 0.19       2.63 r
+  lanes_lane2_mul_69_34_g3721/CO (ADDFX1)                 0.19       2.82 r
+  lanes_lane2_mul_69_34_g3710/CO (ADDFX1)                 0.19       3.00 r
+  lanes_lane2_mul_69_34_g3699/CO (ADDFX1)                 0.19       3.19 r
+  lanes_lane2_mul_69_34_g3688/CO (ADDFX1)                 0.19       3.37 r
+  lanes_lane2_mul_69_34_g3677/CO (ADDFX1)                 0.19       3.56 r
+  lanes_lane2_mul_69_34_g3666/CO (ADDFX1)                 0.19       3.74 r
+  lanes_lane2_mul_69_34_g3655/CO (ADDFX1)                 0.19       3.93 r
+  lanes_lane2_mul_69_34_g3649/Y (NAND2X1)                 0.11       4.04 f
+  lanes_lane2_mul_69_34_g3643/Y (OAI21X1)                 0.11       4.15 r
+  lanes_lane2_mul_69_34_g3631/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane2_mul_69_34_g3619/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane2_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.86 r
+  lanes_lane2_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane2_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane2_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane2_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane2_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane2_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane2_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane2_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane2_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane2_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane2_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane2_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane2_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane2_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane2_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane2_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g154566/Y (AOI21X1)                                     0.15       8.07 f
+  g153930/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank2_reg[1][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank2_reg[1][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[2][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108686/Y (NAND2X1)                                     0.17       0.77 f
+  g108632/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107724__1617/Y (AOI221X1)                              0.05       0.89 f
+  g107408__2398/Y (NAND3X4)                               0.11       1.00 r
+  FE_DBTC17_n_6411/Y (INVX1)                              0.16       1.16 f
+  lanes_lane2_mul_69_34_g4004/Y (NOR2X1)                  0.16       1.32 r
+  lanes_lane2_mul_69_34_g3865/CO (ADDFX1)                 0.21       1.52 r
+  lanes_lane2_mul_69_34_g3813/CO (ADDFX1)                 0.19       1.71 r
+  lanes_lane2_mul_69_34_g3789/CO (ADDFX1)                 0.19       1.89 r
+  lanes_lane2_mul_69_34_g3768/CO (ADDFX1)                 0.19       2.08 r
+  lanes_lane2_mul_69_34_g3754/CO (ADDFX1)                 0.19       2.26 r
+  lanes_lane2_mul_69_34_g3743/CO (ADDFX1)                 0.19       2.45 r
+  lanes_lane2_mul_69_34_g3732/CO (ADDFX1)                 0.19       2.63 r
+  lanes_lane2_mul_69_34_g3721/CO (ADDFX1)                 0.19       2.82 r
+  lanes_lane2_mul_69_34_g3710/CO (ADDFX1)                 0.19       3.00 r
+  lanes_lane2_mul_69_34_g3699/CO (ADDFX1)                 0.19       3.19 r
+  lanes_lane2_mul_69_34_g3688/CO (ADDFX1)                 0.19       3.37 r
+  lanes_lane2_mul_69_34_g3677/CO (ADDFX1)                 0.19       3.56 r
+  lanes_lane2_mul_69_34_g3666/CO (ADDFX1)                 0.19       3.74 r
+  lanes_lane2_mul_69_34_g3655/CO (ADDFX1)                 0.19       3.93 r
+  lanes_lane2_mul_69_34_g3649/Y (NAND2X1)                 0.11       4.04 f
+  lanes_lane2_mul_69_34_g3643/Y (OAI21X1)                 0.11       4.15 r
+  lanes_lane2_mul_69_34_g3631/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane2_mul_69_34_g3619/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane2_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.86 r
+  lanes_lane2_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane2_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane2_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane2_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane2_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane2_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane2_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane2_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane2_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane2_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane2_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane2_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane2_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane2_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane2_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane2_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g154566/Y (AOI21X1)                                     0.15       8.07 f
+  g153887/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank2_reg[2][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank2_reg[2][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[3][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108686/Y (NAND2X1)                                     0.17       0.77 f
+  g108632/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107724__1617/Y (AOI221X1)                              0.05       0.89 f
+  g107408__2398/Y (NAND3X4)                               0.11       1.00 r
+  FE_DBTC17_n_6411/Y (INVX1)                              0.16       1.16 f
+  lanes_lane2_mul_69_34_g4004/Y (NOR2X1)                  0.16       1.32 r
+  lanes_lane2_mul_69_34_g3865/CO (ADDFX1)                 0.21       1.52 r
+  lanes_lane2_mul_69_34_g3813/CO (ADDFX1)                 0.19       1.71 r
+  lanes_lane2_mul_69_34_g3789/CO (ADDFX1)                 0.19       1.89 r
+  lanes_lane2_mul_69_34_g3768/CO (ADDFX1)                 0.19       2.08 r
+  lanes_lane2_mul_69_34_g3754/CO (ADDFX1)                 0.19       2.26 r
+  lanes_lane2_mul_69_34_g3743/CO (ADDFX1)                 0.19       2.45 r
+  lanes_lane2_mul_69_34_g3732/CO (ADDFX1)                 0.19       2.63 r
+  lanes_lane2_mul_69_34_g3721/CO (ADDFX1)                 0.19       2.82 r
+  lanes_lane2_mul_69_34_g3710/CO (ADDFX1)                 0.19       3.00 r
+  lanes_lane2_mul_69_34_g3699/CO (ADDFX1)                 0.19       3.19 r
+  lanes_lane2_mul_69_34_g3688/CO (ADDFX1)                 0.19       3.37 r
+  lanes_lane2_mul_69_34_g3677/CO (ADDFX1)                 0.19       3.56 r
+  lanes_lane2_mul_69_34_g3666/CO (ADDFX1)                 0.19       3.74 r
+  lanes_lane2_mul_69_34_g3655/CO (ADDFX1)                 0.19       3.93 r
+  lanes_lane2_mul_69_34_g3649/Y (NAND2X1)                 0.11       4.04 f
+  lanes_lane2_mul_69_34_g3643/Y (OAI21X1)                 0.11       4.15 r
+  lanes_lane2_mul_69_34_g3631/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane2_mul_69_34_g3619/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane2_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.86 r
+  lanes_lane2_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane2_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane2_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane2_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane2_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane2_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane2_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane2_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane2_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane2_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane2_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane2_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane2_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane2_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane2_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane2_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g154566/Y (AOI21X1)                                     0.15       8.07 f
+  g153889/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank2_reg[3][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank2_reg[3][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[6][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108686/Y (NAND2X1)                                     0.17       0.77 f
+  g108632/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107724__1617/Y (AOI221X1)                              0.05       0.89 f
+  g107408__2398/Y (NAND3X4)                               0.11       1.00 r
+  FE_DBTC17_n_6411/Y (INVX1)                              0.16       1.16 f
+  lanes_lane2_mul_69_34_g4004/Y (NOR2X1)                  0.16       1.32 r
+  lanes_lane2_mul_69_34_g3865/CO (ADDFX1)                 0.21       1.52 r
+  lanes_lane2_mul_69_34_g3813/CO (ADDFX1)                 0.19       1.71 r
+  lanes_lane2_mul_69_34_g3789/CO (ADDFX1)                 0.19       1.89 r
+  lanes_lane2_mul_69_34_g3768/CO (ADDFX1)                 0.19       2.08 r
+  lanes_lane2_mul_69_34_g3754/CO (ADDFX1)                 0.19       2.26 r
+  lanes_lane2_mul_69_34_g3743/CO (ADDFX1)                 0.19       2.45 r
+  lanes_lane2_mul_69_34_g3732/CO (ADDFX1)                 0.19       2.63 r
+  lanes_lane2_mul_69_34_g3721/CO (ADDFX1)                 0.19       2.82 r
+  lanes_lane2_mul_69_34_g3710/CO (ADDFX1)                 0.19       3.00 r
+  lanes_lane2_mul_69_34_g3699/CO (ADDFX1)                 0.19       3.19 r
+  lanes_lane2_mul_69_34_g3688/CO (ADDFX1)                 0.19       3.37 r
+  lanes_lane2_mul_69_34_g3677/CO (ADDFX1)                 0.19       3.56 r
+  lanes_lane2_mul_69_34_g3666/CO (ADDFX1)                 0.19       3.74 r
+  lanes_lane2_mul_69_34_g3655/CO (ADDFX1)                 0.19       3.93 r
+  lanes_lane2_mul_69_34_g3649/Y (NAND2X1)                 0.11       4.04 f
+  lanes_lane2_mul_69_34_g3643/Y (OAI21X1)                 0.11       4.15 r
+  lanes_lane2_mul_69_34_g3631/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane2_mul_69_34_g3619/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane2_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.86 r
+  lanes_lane2_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane2_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane2_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane2_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane2_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane2_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane2_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane2_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane2_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane2_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane2_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane2_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane2_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane2_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane2_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane2_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g154566/Y (AOI21X1)                                     0.15       8.07 f
+  g153891/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank2_reg[6][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank2_reg[6][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[7][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108686/Y (NAND2X1)                                     0.17       0.77 f
+  g108632/Y (OAI2BB1X1)                                   0.06       0.83 r
+  g107724__1617/Y (AOI221X1)                              0.05       0.89 f
+  g107408__2398/Y (NAND3X4)                               0.11       1.00 r
+  FE_DBTC17_n_6411/Y (INVX1)                              0.16       1.16 f
+  lanes_lane2_mul_69_34_g4004/Y (NOR2X1)                  0.16       1.32 r
+  lanes_lane2_mul_69_34_g3865/CO (ADDFX1)                 0.21       1.52 r
+  lanes_lane2_mul_69_34_g3813/CO (ADDFX1)                 0.19       1.71 r
+  lanes_lane2_mul_69_34_g3789/CO (ADDFX1)                 0.19       1.89 r
+  lanes_lane2_mul_69_34_g3768/CO (ADDFX1)                 0.19       2.08 r
+  lanes_lane2_mul_69_34_g3754/CO (ADDFX1)                 0.19       2.26 r
+  lanes_lane2_mul_69_34_g3743/CO (ADDFX1)                 0.19       2.45 r
+  lanes_lane2_mul_69_34_g3732/CO (ADDFX1)                 0.19       2.63 r
+  lanes_lane2_mul_69_34_g3721/CO (ADDFX1)                 0.19       2.82 r
+  lanes_lane2_mul_69_34_g3710/CO (ADDFX1)                 0.19       3.00 r
+  lanes_lane2_mul_69_34_g3699/CO (ADDFX1)                 0.19       3.19 r
+  lanes_lane2_mul_69_34_g3688/CO (ADDFX1)                 0.19       3.37 r
+  lanes_lane2_mul_69_34_g3677/CO (ADDFX1)                 0.19       3.56 r
+  lanes_lane2_mul_69_34_g3666/CO (ADDFX1)                 0.19       3.74 r
+  lanes_lane2_mul_69_34_g3655/CO (ADDFX1)                 0.19       3.93 r
+  lanes_lane2_mul_69_34_g3649/Y (NAND2X1)                 0.11       4.04 f
+  lanes_lane2_mul_69_34_g3643/Y (OAI21X1)                 0.11       4.15 r
+  lanes_lane2_mul_69_34_g3631/Y (OAI222X1)                0.24       4.39 f
+  lanes_lane2_mul_69_34_g3619/Y (MX2XL)                   0.21       4.60 r
+  lanes_lane2_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.86 r
+  lanes_lane2_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.07 r
+  lanes_lane2_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.25 r
+  lanes_lane2_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.44 r
+  lanes_lane2_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.62 r
+  lanes_lane2_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.81 r
+  lanes_lane2_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.99 r
+  lanes_lane2_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.18 r
+  lanes_lane2_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.36 r
+  lanes_lane2_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.55 r
+  lanes_lane2_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.73 r
+  lanes_lane2_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.92 r
+  lanes_lane2_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.10 r
+  lanes_lane2_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.29 r
+  lanes_lane2_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.47 r
+  lanes_lane2_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.66 r
+  lanes_lane2_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.91 r
+  g154566/Y (AOI21X1)                                     0.15       8.07 f
+  g153918/Y (OAI21X1)                                     0.19       8.26 r
+  regfile_bank2_reg[7][31]/D (DFFHQX1)                    0.00       8.26 r
+  data arrival time                                                  8.26
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank2_reg[7][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.26
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.60
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank1_reg[0][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108673/Y (NAND2X1)                                     0.17       0.77 f
+  g107903__6161/Y (OAI2BB1X1)                             0.06       0.83 r
+  g107541__9945/Y (AOI221X1)                              0.05       0.89 f
+  g107287__6161/Y (NAND3X4)                               0.12       1.00 r
+  lanes_lane1_mul_69_34_g4016/Y (INVX1)                   0.13       1.14 f
+  lanes_lane1_mul_69_34_g4013/Y (NOR2X1)                  0.13       1.27 r
+  lanes_lane1_mul_69_34_g3886/CO (ADDFX1)                 0.20       1.47 r
+  lanes_lane1_mul_69_34_g3824/CO (ADDFX1)                 0.19       1.65 r
+  lanes_lane1_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.84 r
+  lanes_lane1_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.03 r
+  lanes_lane1_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.21 r
+  lanes_lane1_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.40 r
+  lanes_lane1_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.58 r
+  lanes_lane1_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.77 r
+  lanes_lane1_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.95 r
+  lanes_lane1_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.14 r
+  lanes_lane1_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.32 r
+  lanes_lane1_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.51 r
+  lanes_lane1_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.69 r
+  lanes_lane1_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.88 r
+  lanes_lane1_mul_69_34_g3658/Y (NAND2X1)                 0.11       3.98 f
+  lanes_lane1_mul_69_34_g3652/Y (OAI21X1)                 0.11       4.09 r
+  lanes_lane1_mul_69_34_g3640/Y (OAI222X1)                0.24       4.33 f
+  lanes_lane1_mul_69_34_g3630/Y (MX2XL)                   0.21       4.55 r
+  lanes_lane1_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.81 r
+  lanes_lane1_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.01 r
+  lanes_lane1_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.20 r
+  lanes_lane1_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.38 r
+  lanes_lane1_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.57 r
+  lanes_lane1_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.75 r
+  lanes_lane1_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.94 r
+  lanes_lane1_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.12 r
+  lanes_lane1_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.31 r
+  lanes_lane1_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.49 r
+  lanes_lane1_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.68 r
+  lanes_lane1_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.86 r
+  lanes_lane1_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.05 r
+  lanes_lane1_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.23 r
+  lanes_lane1_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.42 r
+  lanes_lane1_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.60 r
+  lanes_lane1_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.86 r
+  g154559/Y (AOI21X1)                                     0.15       8.01 f
+  g153923/Y (OAI22X1)                                     0.20       8.22 r
+  regfile_bank1_reg[0][31]/D (DFFHQX1)                    0.00       8.22 r
+  data arrival time                                                  8.22
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank1_reg[0][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.22
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank1_reg[4][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108673/Y (NAND2X1)                                     0.17       0.77 f
+  g107903__6161/Y (OAI2BB1X1)                             0.06       0.83 r
+  g107541__9945/Y (AOI221X1)                              0.05       0.89 f
+  g107287__6161/Y (NAND3X4)                               0.12       1.00 r
+  lanes_lane1_mul_69_34_g4016/Y (INVX1)                   0.13       1.14 f
+  lanes_lane1_mul_69_34_g4013/Y (NOR2X1)                  0.13       1.27 r
+  lanes_lane1_mul_69_34_g3886/CO (ADDFX1)                 0.20       1.47 r
+  lanes_lane1_mul_69_34_g3824/CO (ADDFX1)                 0.19       1.65 r
+  lanes_lane1_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.84 r
+  lanes_lane1_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.03 r
+  lanes_lane1_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.21 r
+  lanes_lane1_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.40 r
+  lanes_lane1_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.58 r
+  lanes_lane1_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.77 r
+  lanes_lane1_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.95 r
+  lanes_lane1_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.14 r
+  lanes_lane1_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.32 r
+  lanes_lane1_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.51 r
+  lanes_lane1_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.69 r
+  lanes_lane1_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.88 r
+  lanes_lane1_mul_69_34_g3658/Y (NAND2X1)                 0.11       3.98 f
+  lanes_lane1_mul_69_34_g3652/Y (OAI21X1)                 0.11       4.09 r
+  lanes_lane1_mul_69_34_g3640/Y (OAI222X1)                0.24       4.33 f
+  lanes_lane1_mul_69_34_g3630/Y (MX2XL)                   0.21       4.55 r
+  lanes_lane1_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.81 r
+  lanes_lane1_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.01 r
+  lanes_lane1_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.20 r
+  lanes_lane1_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.38 r
+  lanes_lane1_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.57 r
+  lanes_lane1_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.75 r
+  lanes_lane1_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.94 r
+  lanes_lane1_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.12 r
+  lanes_lane1_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.31 r
+  lanes_lane1_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.49 r
+  lanes_lane1_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.68 r
+  lanes_lane1_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.86 r
+  lanes_lane1_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.05 r
+  lanes_lane1_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.23 r
+  lanes_lane1_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.42 r
+  lanes_lane1_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.60 r
+  lanes_lane1_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.86 r
+  g154559/Y (AOI21X1)                                     0.15       8.01 f
+  g153937/Y (OAI22X1)                                     0.20       8.22 r
+  regfile_bank1_reg[4][31]/D (DFFHQX1)                    0.00       8.22 r
+  data arrival time                                                  8.22
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank1_reg[4][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.22
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank1_reg[5][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108673/Y (NAND2X1)                                     0.17       0.77 f
+  g107903__6161/Y (OAI2BB1X1)                             0.06       0.83 r
+  g107541__9945/Y (AOI221X1)                              0.05       0.89 f
+  g107287__6161/Y (NAND3X4)                               0.12       1.00 r
+  lanes_lane1_mul_69_34_g4016/Y (INVX1)                   0.13       1.14 f
+  lanes_lane1_mul_69_34_g4013/Y (NOR2X1)                  0.13       1.27 r
+  lanes_lane1_mul_69_34_g3886/CO (ADDFX1)                 0.20       1.47 r
+  lanes_lane1_mul_69_34_g3824/CO (ADDFX1)                 0.19       1.65 r
+  lanes_lane1_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.84 r
+  lanes_lane1_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.03 r
+  lanes_lane1_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.21 r
+  lanes_lane1_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.40 r
+  lanes_lane1_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.58 r
+  lanes_lane1_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.77 r
+  lanes_lane1_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.95 r
+  lanes_lane1_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.14 r
+  lanes_lane1_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.32 r
+  lanes_lane1_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.51 r
+  lanes_lane1_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.69 r
+  lanes_lane1_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.88 r
+  lanes_lane1_mul_69_34_g3658/Y (NAND2X1)                 0.11       3.98 f
+  lanes_lane1_mul_69_34_g3652/Y (OAI21X1)                 0.11       4.09 r
+  lanes_lane1_mul_69_34_g3640/Y (OAI222X1)                0.24       4.33 f
+  lanes_lane1_mul_69_34_g3630/Y (MX2XL)                   0.21       4.55 r
+  lanes_lane1_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.81 r
+  lanes_lane1_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.01 r
+  lanes_lane1_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.20 r
+  lanes_lane1_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.38 r
+  lanes_lane1_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.57 r
+  lanes_lane1_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.75 r
+  lanes_lane1_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.94 r
+  lanes_lane1_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.12 r
+  lanes_lane1_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.31 r
+  lanes_lane1_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.49 r
+  lanes_lane1_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.68 r
+  lanes_lane1_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.86 r
+  lanes_lane1_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.05 r
+  lanes_lane1_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.23 r
+  lanes_lane1_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.42 r
+  lanes_lane1_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.60 r
+  lanes_lane1_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.86 r
+  g154559/Y (AOI21X1)                                     0.15       8.01 f
+  g153940/Y (OAI22X1)                                     0.20       8.22 r
+  regfile_bank1_reg[5][31]/D (DFFHQX1)                    0.00       8.22 r
+  data arrival time                                                  8.22
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank1_reg[5][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.16       9.84
+  data required time                                                 9.84
+  ------------------------------------------------------------------------------
+  data required time                                                 9.84
+  data arrival time                                                 -8.22
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.63
+
+
+  Startpoint: control_instr_word_reg[24]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank1_reg[1][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  control_instr_word_reg[24]/CK (DFFHQX1)                 0.00       0.00 r
+  control_instr_word_reg[24]/Q (DFFHQX1)                  0.18       0.18 r
+  g108850/Y (AND2X1)                                      0.14       0.32 r
+  g108839/Y (AND2X4)                                      0.27       0.60 r
+  g108673/Y (NAND2X1)                                     0.17       0.77 f
+  g107903__6161/Y (OAI2BB1X1)                             0.06       0.83 r
+  g107541__9945/Y (AOI221X1)                              0.05       0.89 f
+  g107287__6161/Y (NAND3X4)                               0.12       1.00 r
+  lanes_lane1_mul_69_34_g4016/Y (INVX1)                   0.13       1.14 f
+  lanes_lane1_mul_69_34_g4013/Y (NOR2X1)                  0.13       1.27 r
+  lanes_lane1_mul_69_34_g3886/CO (ADDFX1)                 0.20       1.47 r
+  lanes_lane1_mul_69_34_g3824/CO (ADDFX1)                 0.19       1.65 r
+  lanes_lane1_mul_69_34_g3799/CO (ADDFX1)                 0.19       1.84 r
+  lanes_lane1_mul_69_34_g3778/CO (ADDFX1)                 0.19       2.03 r
+  lanes_lane1_mul_69_34_g3763/CO (ADDFX1)                 0.19       2.21 r
+  lanes_lane1_mul_69_34_g3752/CO (ADDFX1)                 0.19       2.40 r
+  lanes_lane1_mul_69_34_g3741/CO (ADDFX1)                 0.19       2.58 r
+  lanes_lane1_mul_69_34_g3730/CO (ADDFX1)                 0.19       2.77 r
+  lanes_lane1_mul_69_34_g3719/CO (ADDFX1)                 0.19       2.95 r
+  lanes_lane1_mul_69_34_g3708/CO (ADDFX1)                 0.19       3.14 r
+  lanes_lane1_mul_69_34_g3697/CO (ADDFX1)                 0.19       3.32 r
+  lanes_lane1_mul_69_34_g3686/CO (ADDFX1)                 0.19       3.51 r
+  lanes_lane1_mul_69_34_g3675/CO (ADDFX1)                 0.19       3.69 r
+  lanes_lane1_mul_69_34_g3664/CO (ADDFX1)                 0.19       3.88 r
+  lanes_lane1_mul_69_34_g3658/Y (NAND2X1)                 0.11       3.98 f
+  lanes_lane1_mul_69_34_g3652/Y (OAI21X1)                 0.11       4.09 r
+  lanes_lane1_mul_69_34_g3640/Y (OAI222X1)                0.24       4.33 f
+  lanes_lane1_mul_69_34_g3630/Y (MX2XL)                   0.21       4.55 r
+  lanes_lane1_mul_69_34_cdnfadd_016_3/S (ADDFX1)          0.26       4.81 r
+  lanes_lane1_mul_69_34_cdnfadd16/CO (ADDFX1)             0.20       5.01 r
+  lanes_lane1_mul_69_34_cdnfadd17/CO (ADDFX1)             0.19       5.20 r
+  lanes_lane1_mul_69_34_cdnfadd18/CO (ADDFX1)             0.19       5.38 r
+  lanes_lane1_mul_69_34_cdnfadd19/CO (ADDFX1)             0.19       5.57 r
+  lanes_lane1_mul_69_34_cdnfadd20/CO (ADDFX1)             0.19       5.75 r
+  lanes_lane1_mul_69_34_cdnfadd21/CO (ADDFX1)             0.19       5.94 r
+  lanes_lane1_mul_69_34_cdnfadd22/CO (ADDFX1)             0.19       6.12 r
+  lanes_lane1_mul_69_34_cdnfadd23/CO (ADDFX1)             0.19       6.31 r
+  lanes_lane1_mul_69_34_cdnfadd24/CO (ADDFX1)             0.19       6.49 r
+  lanes_lane1_mul_69_34_cdnfadd25/CO (ADDFX1)             0.19       6.68 r
+  lanes_lane1_mul_69_34_cdnfadd26/CO (ADDFX1)             0.19       6.86 r
+  lanes_lane1_mul_69_34_cdnfadd27/CO (ADDFX1)             0.19       7.05 r
+  lanes_lane1_mul_69_34_cdnfadd28/CO (ADDFX1)             0.19       7.23 r
+  lanes_lane1_mul_69_34_cdnfadd29/CO (ADDFX1)             0.19       7.42 r
+  lanes_lane1_mul_69_34_cdnfadd30/CO (ADDFX1)             0.19       7.60 r
+  lanes_lane1_mul_69_34_cdnfadd31/S (ADDFX1)              0.26       7.86 r
+  g154559/Y (AOI21X1)                                     0.15       8.01 f
+  g153926/Y (OAI21X1)                                     0.19       8.20 r
+  regfile_bank1_reg[1][31]/D (DFFHQX1)                    0.00       8.20 r
+  data arrival time                                                  8.20
+
+  clock clk (rise edge)                                  10.00      10.00
+  clock network delay (ideal)                             0.00      10.00
+  regfile_bank1_reg[1][31]/CK (DFFHQX1)                             10.00 r
+  clock reconvergence pessimism                           0.00      10.00
+  library setup time                                     -0.14       9.86
+  data required time                                                 9.86
+  ------------------------------------------------------------------------------
+  data required time                                                 9.86
+  data arrival time                                                 -8.20
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        1.65
+
+Warning: report_timing has satisfied the max_paths criteria. There are 1462 further endpoints which have paths of interest with slack less than  1000.00 that were not considered when generating this report. (UITE-502)
+
+1

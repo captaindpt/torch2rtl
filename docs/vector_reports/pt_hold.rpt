@@ -1,0 +1,630 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-slack_lesser_than 1000.00
+	-max_paths 20
+	-sort_by slack
+Design : gpu_top
+Version: W-2024.09-SP2
+Date   : Wed Mar 11 16:19:18 2026
+****************************************
+
+
+  Startpoint: lsu_state_reg[0]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_state_reg[0]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_state_reg[0]/CK (DFFHQX1)                           0.00       0.00 r
+  lsu_state_reg[0]/Q (DFFHQX1)                            0.18       0.18 r
+  g157163/Y (MXI2XL)                                      0.07       0.25 f
+  lsu_state_reg[0]/D (DFFHQX1)                            0.00       0.25 f
+  data arrival time                                                  0.25
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_state_reg[0]/CK (DFFHQX1)                                      0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                      -0.02      -0.02
+  data required time                                                -0.02
+  ------------------------------------------------------------------------------
+  data required time                                                -0.02
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.27
+
+
+  Startpoint: lsu_state_reg[1]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_state_reg[1]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_state_reg[1]/CK (DFFHQX1)                           0.00       0.00 r
+  lsu_state_reg[1]/Q (DFFHQX1)                            0.18       0.18 r
+  g159511/Y (NOR2X1)                                      0.04       0.22 f
+  g157822/Y (NAND2X1)                                     0.04       0.26 r
+  g157427/Y (NOR2X1)                                      0.03       0.29 f
+  lsu_state_reg[1]/D (DFFHQX1)                            0.00       0.29 f
+  data arrival time                                                  0.29
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_state_reg[1]/CK (DFFHQX1)                                      0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.29
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.29
+
+
+  Startpoint: regfile_bank2_reg[7][13]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank2_reg[7][13]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank2_reg[7][13]/CK (DFFHQX1)                   0.00       0.00 r
+  regfile_bank2_reg[7][13]/Q (DFFHQX1)                    0.20       0.20 f
+  g155434/Y (OAI2BB1X1)                                   0.09       0.29 f
+  regfile_bank2_reg[7][13]/D (DFFHQX1)                    0.00       0.29 f
+  data arrival time                                                  0.29
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank2_reg[7][13]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                      -0.00      -0.00
+  data required time                                                -0.00
+  ------------------------------------------------------------------------------
+  data required time                                                -0.00
+  data arrival time                                                 -0.29
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.29
+
+
+  Startpoint: regfile_bank3_reg[7][13]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank3_reg[7][13]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank3_reg[7][13]/CK (DFFHQX1)                   0.00       0.00 r
+  regfile_bank3_reg[7][13]/Q (DFFHQX1)                    0.20       0.20 f
+  g155435/Y (OAI2BB1X1)                                   0.09       0.29 f
+  regfile_bank3_reg[7][13]/D (DFFHQX1)                    0.00       0.29 f
+  data arrival time                                                  0.29
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank3_reg[7][13]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                      -0.00      -0.00
+  data required time                                                -0.00
+  ------------------------------------------------------------------------------
+  data required time                                                -0.00
+  data arrival time                                                 -0.29
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.29
+
+
+  Startpoint: regfile_bank0_reg[0][3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[0][3]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank0_reg[0][3]/CK (DFFHQX1)                    0.00       0.00 r
+  regfile_bank0_reg[0][3]/Q (DFFHQX1)                     0.20       0.20 f
+  g153898/Y (OAI2BB1X1)                                   0.09       0.29 f
+  regfile_bank0_reg[0][3]/D (DFFHQX1)                     0.00       0.29 f
+  data arrival time                                                  0.29
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank0_reg[0][3]/CK (DFFHQX1)                               0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                      -0.00      -0.00
+  data required time                                                -0.00
+  ------------------------------------------------------------------------------
+  data required time                                                -0.00
+  data arrival time                                                 -0.29
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.29
+
+
+  Startpoint: regfile_bank0_reg[0][30]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank0_reg[0][30]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank0_reg[0][30]/CK (DFFHQX1)                   0.00       0.00 r
+  regfile_bank0_reg[0][30]/Q (DFFHQX1)                    0.20       0.20 f
+  g153899/Y (OAI2BB1X1)                                   0.09       0.29 f
+  regfile_bank0_reg[0][30]/D (DFFHQX1)                    0.00       0.29 f
+  data arrival time                                                  0.29
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank0_reg[0][30]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                      -0.00      -0.00
+  data required time                                                -0.00
+  ------------------------------------------------------------------------------
+  data required time                                                -0.00
+  data arrival time                                                 -0.29
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.29
+
+
+  Startpoint: regfile_bank3_reg[0][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: regfile_bank3_reg[0][31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank3_reg[0][31]/CK (DFFHQX1)                   0.00       0.00 r
+  regfile_bank3_reg[0][31]/Q (DFFHQX1)                    0.20       0.20 f
+  g154127/Y (OAI2BB1X1)                                   0.09       0.29 f
+  regfile_bank3_reg[0][31]/D (DFFHQX1)                    0.00       0.29 f
+  data arrival time                                                  0.29
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  regfile_bank3_reg[0][31]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                      -0.00      -0.00
+  data required time                                                -0.00
+  ------------------------------------------------------------------------------
+  data required time                                                -0.00
+  data arrival time                                                 -0.29
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.30
+
+
+  Startpoint: lsu_base_addr_reg_reg[31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[31]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[31]/CK (DFFHQX1)                  0.00       0.00 r
+  lsu_base_addr_reg_reg[31]/Q (DFFHQX1)                   0.20       0.20 f
+  g158461/Y (AOI22X1)                                     0.06       0.26 r
+  g157577/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[31]/D (DFFHQX1)                   0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[31]/CK (DFFHQX1)                             0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.30
+
+
+  Startpoint: lsu_base_addr_reg_reg[4]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[4]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[4]/CK (DFFHQX1)                   0.00       0.00 r
+  lsu_base_addr_reg_reg[4]/Q (DFFHQX1)                    0.20       0.20 f
+  g158465/Y (AOI22X1)                                     0.06       0.26 r
+  g157916/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[4]/D (DFFHQX1)                    0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[4]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[8]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[8]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[8]/CK (DFFHQX1)                   0.00       0.00 r
+  lsu_base_addr_reg_reg[8]/Q (DFFHQX1)                    0.20       0.20 f
+  g158470/Y (AOI22X1)                                     0.06       0.26 r
+  g157918/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[8]/D (DFFHQX1)                    0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[8]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[15]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[15]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[15]/CK (DFFHQX1)                  0.00       0.00 r
+  lsu_base_addr_reg_reg[15]/Q (DFFHQX1)                   0.20       0.20 f
+  g158476/Y (AOI22X1)                                     0.06       0.26 r
+  g157926/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[15]/D (DFFHQX1)                   0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[15]/CK (DFFHQX1)                             0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[9]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[9]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[9]/CK (DFFHQX1)                   0.00       0.00 r
+  lsu_base_addr_reg_reg[9]/Q (DFFHQX1)                    0.20       0.20 f
+  g158396/Y (AOI22X1)                                     0.06       0.26 r
+  g157919/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[9]/D (DFFHQX1)                    0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[9]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[7]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[7]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[7]/CK (DFFHQX1)                   0.00       0.00 r
+  lsu_base_addr_reg_reg[7]/Q (DFFHQX1)                    0.20       0.20 f
+  g158469/Y (AOI22X1)                                     0.06       0.26 r
+  g157917/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[7]/D (DFFHQX1)                    0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[7]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[11]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[11]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[11]/CK (DFFHQX1)                  0.00       0.00 r
+  lsu_base_addr_reg_reg[11]/Q (DFFHQX1)                   0.20       0.20 f
+  g158471/Y (AOI22X1)                                     0.06       0.26 r
+  g157922/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[11]/D (DFFHQX1)                   0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[11]/CK (DFFHQX1)                             0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[12]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[12]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[12]/CK (DFFHQX1)                  0.00       0.00 r
+  lsu_base_addr_reg_reg[12]/Q (DFFHQX1)                   0.20       0.20 f
+  g158406/Y (AOI22X1)                                     0.06       0.26 r
+  g157921/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[12]/D (DFFHQX1)                   0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[12]/CK (DFFHQX1)                             0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[13]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[13]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[13]/CK (DFFHQX1)                  0.00       0.00 r
+  lsu_base_addr_reg_reg[13]/Q (DFFHQX1)                   0.20       0.20 f
+  g158474/Y (AOI22X1)                                     0.06       0.26 r
+  g157923/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[13]/D (DFFHQX1)                   0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[13]/CK (DFFHQX1)                             0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[10]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[10]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[10]/CK (DFFHQX1)                  0.00       0.00 r
+  lsu_base_addr_reg_reg[10]/Q (DFFHQX1)                   0.20       0.20 f
+  g158458/Y (AOI22X1)                                     0.06       0.26 r
+  g157920/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[10]/D (DFFHQX1)                   0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[10]/CK (DFFHQX1)                             0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[5]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[5]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[5]/CK (DFFHQX1)                   0.00       0.00 r
+  lsu_base_addr_reg_reg[5]/Q (DFFHQX1)                    0.20       0.20 f
+  g158466/Y (AOI22X1)                                     0.06       0.26 r
+  g157913/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[5]/D (DFFHQX1)                    0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[5]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[14]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[14]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[14]/CK (DFFHQX1)                  0.00       0.00 r
+  lsu_base_addr_reg_reg[14]/Q (DFFHQX1)                   0.20       0.20 f
+  g158475/Y (AOI22X1)                                     0.06       0.26 r
+  g157924/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[14]/D (DFFHQX1)                   0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[14]/CK (DFFHQX1)                             0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+
+  Startpoint: lsu_base_addr_reg_reg[6]
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: lsu_base_addr_reg_reg[6]
+               (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[6]/CK (DFFHQX1)                   0.00       0.00 r
+  lsu_base_addr_reg_reg[6]/Q (DFFHQX1)                    0.20       0.20 f
+  g158468/Y (AOI22X1)                                     0.06       0.26 r
+  g157915/Y (NOR2X1)                                      0.05       0.31 f
+  lsu_base_addr_reg_reg[6]/D (DFFHQX1)                    0.00       0.31 f
+  data arrival time                                                  0.31
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  lsu_base_addr_reg_reg[6]/CK (DFFHQX1)                              0.00 r
+  clock reconvergence pessimism                           0.00       0.00
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  ------------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.31
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.31
+
+Warning: report_timing has satisfied the max_paths criteria. There are 1462 further endpoints which have paths of interest with slack less than  1000.00 that were not considered when generating this report. (UITE-502)
+
+1

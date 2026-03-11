@@ -1,0 +1,97 @@
+xrun(64): 25.09-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
+TOOL:	xrun(64)	25.09-s001: Started on Mar 11, 2026 at 16:08:11 EDT
+xrun
+	-clean
+	-64bit
+	-access +rwc
+	-timescale 1ns/1ps
+	-incdir /home/v71349/torch2rtl
+	-incdir /home/v71349/torch2rtl/rtl
+	-incdir /home/v71349/torch2rtl/tb
+	-incdir /home/v71349/eda-pilot
+	-incdir /home/v71349/eda-pilot/rtl
+	-incdir /home/v71349/eda-pilot/tb
+	-incdir /home/v71349/eda-pilot/examples/gpu_top
+	-incdir /home/v71349/torch2rtl/rtl
+	-incdir /home/v71349/torch2rtl/tb
+	-l /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/rtl-sim/xrun.log
+	/home/v71349/torch2rtl/rtl/gpu_top.v
+	/home/v71349/torch2rtl/tb/tb_gpu_inference.v
+xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
+xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/rtl (No such file or directory).
+xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/tb (No such file or directory).
+xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/examples/gpu_top (No such file or directory).
+file: /home/v71349/torch2rtl/rtl/gpu_top.v
+	module worklib.gpu_decoder:v
+		errors: 0, warnings: 0
+	module worklib.gpu_control:v
+		errors: 0, warnings: 0
+	module worklib.vector_regfile:v
+		errors: 0, warnings: 0
+	module worklib.lane_alu32:v
+		errors: 0, warnings: 0
+	module worklib.lane_cluster4:v
+		errors: 0, warnings: 0
+	module worklib.load_store_unit:v
+		errors: 0, warnings: 0
+	module worklib.predicate_unit:v
+		errors: 0, warnings: 0
+	module worklib.gpu_top:v
+		errors: 0, warnings: 0
+file: /home/v71349/torch2rtl/tb/tb_gpu_inference.v
+	module worklib.tb_gpu_inference:v
+		errors: 0, warnings: 0
+xmvlog: *W,SPDUSD: Include directory /home/v71349/torch2rtl given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/v71349/torch2rtl/rtl given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/v71349/torch2rtl/tb given but not used.
+xmvlog: *W,SPDUSD: Include directory /home/v71349/eda-pilot given but not used.
+	Total errors/warnings found outside modules and primitives:
+		errors: 0, warnings: 7
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		worklib.tb_gpu_inference:v (module)
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.predicate_unit:v <0x3eb39c33>
+			streams:   3, words:   778
+		worklib.load_store_unit:v <0x730c51f2>
+			streams:  15, words:  7065
+		worklib.lane_alu32:v <0x3fd20378>
+			streams:   1, words:  5428
+		worklib.lane_cluster4:v <0x4c8439fd>
+			streams:   2, words:   788
+		worklib.vector_regfile:v <0x0d7dbe84>
+			streams:   5, words:  9950
+		worklib.gpu_control:v <0x78107ce2>
+			streams:  18, words:  7730
+		worklib.gpu_decoder:v <0x5ea41cea>
+			streams:   1, words:  6974
+		worklib.gpu_top:v <0x4b53ded3>
+			streams:  11, words:  3710
+		worklib.tb_gpu_inference:v <0x2a1c6f11>
+			streams:  12, words: 12883
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                 Instances  Unique
+		Modules:                12       9
+		Registers:              71      53
+		Scalar wires:           43       -
+		Expanded wires:        128       4
+		Vectored wires:         40       -
+		Always blocks:          13      10
+		Initial blocks:          1       1
+		Cont. assignments:      22      38
+		Pseudo assignments:      9       -
+		Process Clocks:          5       1
+		Simulation timescale:  1ps
+	Writing initial simulation snapshot: worklib.tb_gpu_inference:v
+Loading snapshot worklib.tb_gpu_inference:v .................... Done
+xcelium> source /CMC/tools/cadence/XCELIUMMAIN25.09.001_lnx86/tools/xcelium/files/xmsimrc
+xcelium> run
+PASS tb_gpu_inference (17 checks, cycles=2841, fetched=680)
+Simulation complete via $finish(1) at time 28426 NS + 0
+./tb/tb_gpu_inference.v:131         $finish;
+xcelium> exit
+TOOL:	xrun(64)	25.09-s001: Exiting on Mar 11, 2026 at 16:08:13 EDT  (total: 00:00:02)

@@ -37,27 +37,28 @@ model weights + input
 
 | Metric | 4-lane SIMD | 1-lane scalar | Scalar / SIMD |
 |------|------:|------:|------:|
-| Genus total cell area | `26494.056 um^2` | `7419.006 um^2` | `0.28x` |
-| Innovus placed cell area | `26397.270 um^2` | `7365.996 um^2` | `0.28x` |
-| Innovus allocated area | `37873 um^2` | `10609 um^2` | `0.28x` |
-| Worst setup slack | `1.55 ns` | `1.69 ns` | `1.09x` |
+| Genus total cell area | `27123.678 um^2` | `7419.006 um^2` | `0.27x` |
+| Innovus placed cell area | `27026.550 um^2` | `7365.996 um^2` | `0.27x` |
+| Innovus allocated area | `38779 um^2` | `10609 um^2` | `0.27x` |
+| Worst setup slack | `1.57 ns` | `1.69 ns` | `1.08x` |
 | Worst hold slack | `0.27 ns` | `0.29 ns` | `1.07x` |
-| Derived critical period | `8.45 ns` | `8.31 ns` | `0.98x` |
-| Derived max frequency | `118.34 MHz` | `120.34 MHz` | `1.02x` |
-| Genus power | `0.623 mW` | `0.079 mW` | `0.13x` |
-| Fetched instructions | `1384` | `1384` | `1.00x` |
-| RTL cycles per inference | `6169` | `4129` | `0.67x` |
-| Inference latency | `52.13 us` | `34.31 us` | `0.66x` |
-| Energy per inference | `32.45 nJ` | `2.71 nJ` | `0.08x` |
+| Derived critical period | `8.43 ns` | `8.31 ns` | `0.99x` |
+| Derived max frequency | `118.62 MHz` | `120.34 MHz` | `1.01x` |
+| Genus power | `0.623351 mW` | `0.0790622 mW` | `0.13x` |
+| Fetched instructions | `680` | `1384` | `2.04x` |
+| RTL cycles per inference | `2841` | `4129` | `1.45x` |
+| Inference latency | `23.95 us` | `34.31 us` | `1.43x` |
+| Energy per inference | `14.93 nJ` | `2.71 nJ` | `0.18x` |
 
-Full machine-readable data is checked in at `docs/scalar_comparison.csv`. Scalar backend artifacts are checked in under `docs/scalar_reports/`.
+Full machine-readable data is checked in at `docs/scalar_comparison.csv`. Backend artifacts are checked in under `docs/vector_reports/` and `docs/scalar_reports/`.
 
 ## Interpretation
 
 - The design is large enough to produce meaningful area, timing, and power numbers for both variants.
 - The MLP demo is functionally validated in RTL on both `gpu_top` and `gpu_top_scalar`.
-- The current compiler does not yet map useful MLP parallelism across SIMD lanes. It emits the same `1384` fetched instructions for both targets, with lane-replicated work on the vector machine.
-- Because the current vector load/store unit still serializes four lane transactions per memory op, this workload is faster and much cheaper on the scalar baseline.
+- The previous stride-only vector path was replaced with a packed SIMD path that groups first-layer inputs and weights four-at-a-time and reduces lane products with `VREDSUM`.
+- That change cuts the checked-in vector demo from `1384` to `680` fetched instructions and from `6169` to `2841` cycles per inference.
+- The vector core now beats the scalar baseline on throughput and latency, while the scalar baseline remains much smaller and lower power.
 - Timing is clean in both measured backend paths.
 - DRC remains limited by the base GPDK045 library, not by the compiler or RTL proof path.
 
@@ -65,4 +66,4 @@ Full machine-readable data is checked in at `docs/scalar_comparison.csv`. Scalar
 
 - The backend flow depends on `eda-pilot`; this repo only packages the RTL, compiler, testbenches, and docs.
 - Pegasus DRC is not clean with the base GPDK045 library.
-- The current comparison measures compiler behavior as it exists today, not an optimized SIMD codegen strategy.
+- The SIMD win here comes from packed dot-product codegen for the first layer. There is still no general lane-shuffle/broadcast ISA for more flexible vector programs.
