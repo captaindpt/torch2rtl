@@ -59,7 +59,8 @@ More detail lives in `docs/architecture.md`.
 
 ## Synthesis
 
-Backend implementation depends on `eda-pilot`.
+Backend implementation depends on [`eda-pilot`](https://github.com/captaindpt/eda-pilot).
+The synthesis and backend flow uses eda-pilot's `run_digital_flow.sh`.
 
 ```bash
 FLOW_RTL=$PWD/rtl/gpu_top.v \
