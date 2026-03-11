@@ -101,11 +101,26 @@ def build_data_image(inputs, w1, w2, layout):
             words[base + lane] = value & WORD_MASK
 
     store_vector(layout["zero_vec"], [0] * lanes)
-    for i, value in enumerate(inputs):
-        store_vector(layout["input_base"] + i * slot_bytes, [value] * lanes)
-    for j in range(HIDDEN):
-        for i in range(INPUTS):
-            store_vector(layout["l1_base"] + ((j * INPUTS) + i) * slot_bytes, [w1[j][i]] * lanes)
+    if lanes == 1:
+        for i, value in enumerate(inputs):
+            store_vector(layout["input_base"] + i * slot_bytes, [value] * lanes)
+        for j in range(HIDDEN):
+            for i in range(INPUTS):
+                store_vector(layout["l1_base"] + ((j * INPUTS) + i) * slot_bytes, [w1[j][i]] * lanes)
+    else:
+        for group in range(INPUTS // lanes):
+            base_idx = group * lanes
+            store_vector(
+                layout["input_base"] + base_idx * slot_bytes,
+                [inputs[base_idx + lane] for lane in range(lanes)],
+            )
+        for j in range(HIDDEN):
+            for group in range(INPUTS // lanes):
+                base_idx = group * lanes
+                store_vector(
+                    layout["l1_base"] + ((j * INPUTS) + base_idx) * slot_bytes,
+                    [w1[j][base_idx + lane] for lane in range(lanes)],
+                )
     for o in range(OUTPUTS):
         for h in range(HIDDEN):
             store_vector(layout["l2_base"] + ((o * HIDDEN) + h) * slot_bytes, [w2[o][h]] * lanes)
@@ -113,15 +128,20 @@ def build_data_image(inputs, w1, w2, layout):
 
 
 def emit_program(layout):
+    lanes = layout["lanes"]
     slot_bytes = vec_bytes(layout["lanes"])
     lines = []
     for h in range(HIDDEN):
         lines.append("hidden_{}:".format(h))
         lines.append("VLOAD v1, [v0 + {}]".format(layout["zero_vec"]))
-        for i in range(INPUTS):
-            lines.append("VLOAD v2, [v0 + {}]".format(layout["l1_base"] + ((h * INPUTS) + i) * slot_bytes))
-            lines.append("VLOAD v3, [v0 + {}]".format(layout["input_base"] + i * slot_bytes))
+        group_count = INPUTS if lanes == 1 else (INPUTS // lanes)
+        for group in range(group_count):
+            base_idx = group if lanes == 1 else (group * lanes)
+            lines.append("VLOAD v2, [v0 + {}]".format(layout["l1_base"] + ((h * INPUTS) + base_idx) * slot_bytes))
+            lines.append("VLOAD v3, [v0 + {}]".format(layout["input_base"] + base_idx * slot_bytes))
             lines.append("VMUL v4, v2, v3")
+            if lanes != 1:
+                lines.append("VREDSUM v4, v4")
             lines.append("VADD v1, v1, v4")
         lines.append("VCMPLT p0, v1, v0")
         lines.append("BRA hidden_{}_store_zero".format(h))
@@ -181,6 +201,10 @@ def simulate_program(words, data_words, lanes):
             pc += 1
         elif opcode == gpu_asm.OPS["VMUL"]:
             regs[rd] = [signed32((regs[ra][lane] & 0xFFFF) * (regs[rb][lane] & 0xFFFF)) for lane in range(lanes)]
+            pc += 1
+        elif opcode == gpu_asm.OPS["VREDSUM"]:
+            total = signed32(sum(signed32(regs[ra][lane]) for lane in range(lanes)))
+            regs[rd] = [total] * lanes
             pc += 1
         elif opcode == gpu_asm.OPS["VCMPLT"]:
             pred = all(signed32(regs[ra][lane]) < signed32(regs[rb][lane]) for lane in range(lanes))

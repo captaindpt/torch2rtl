@@ -88,6 +88,10 @@ module gpu_decoder (
                 alu_op = `GPU_ALU_MUL;
                 reg_write = 1'b1;
             end
+            `GPU_OP_VREDSUM: begin
+                alu_op = `GPU_ALU_REDSUM;
+                reg_write = 1'b1;
+            end
             default: begin
                 valid = 1'b0;
                 opcode = 4'hF;

@@ -25,6 +25,7 @@
 `define GPU_OP_VSTORE  4'hA
 `define GPU_OP_BRA     4'hB
 `define GPU_OP_VMUL    4'hC
+`define GPU_OP_VREDSUM 4'hD
 
 `define GPU_ALU_ADD    4'd0
 `define GPU_ALU_SUB    4'd1
@@ -36,5 +37,6 @@
 `define GPU_ALU_CMPEQ  4'd7
 `define GPU_ALU_CMPLT  4'd8
 `define GPU_ALU_MUL    4'd9
+`define GPU_ALU_REDSUM 4'd10
 
 `endif

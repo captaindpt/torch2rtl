@@ -97,6 +97,7 @@ module tb_gpu_decoder;
         check_decode("vstore", make_instr(`GPU_OP_VSTORE, 3'd3, 3'd2, 3'd0, 16'h0020), 1'b1, `GPU_OP_VSTORE, `GPU_ALU_ADD,   3'd3, 3'd2, 3'd0, 16'h0020, 1'b0, 1'b1, 1'b0, 1'b1, 1'b0, 1'b0);
         check_decode("bra",    make_instr(`GPU_OP_BRA,    3'd0, 3'd0, 3'd0, 16'h00f0), 1'b1, `GPU_OP_BRA,    `GPU_ALU_ADD,   3'd0, 3'd0, 3'd0, 16'h00f0, 1'b0, 1'b0, 1'b1, 1'b1, 1'b0, 1'b0);
         check_decode("vmul",   make_instr(`GPU_OP_VMUL,   3'd4, 3'd5, 3'd6, 16'h00c0), 1'b1, `GPU_OP_VMUL,   `GPU_ALU_MUL,   3'd4, 3'd5, 3'd6, 16'h00c0, 1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0);
+        check_decode("vredsum",make_instr(`GPU_OP_VREDSUM,3'd2, 3'd1, 3'd0, 16'h0000), 1'b1, `GPU_OP_VREDSUM,`GPU_ALU_REDSUM,3'd2, 3'd1, 3'd0, 16'h0000, 1'b0, 1'b0, 1'b0, 1'b0, 1'b1, 1'b0);
 
         if (failures == 0) begin
             $display("PASS tb_gpu_decoder (%0d checks)", tests);

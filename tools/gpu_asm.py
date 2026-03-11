@@ -21,11 +21,13 @@ OPS = {
     "VSTORE": 0xA,
     "BRA": 0xB,
     "VMUL": 0xC,
+    "VREDSUM": 0xD,
 }
 
 ARITH3 = {"VADD", "VSUB", "VAND", "VOR", "VXOR", "VMUL"}
 SHIFTS = {"VSHL", "VSHR"}
 COMPARES = {"VCMPEQ", "VCMPLT"}
+REDUCTIONS = {"VREDSUM"}
 REG_RE = re.compile(r"^[Vv]([0-7])$")
 LABEL_RE = re.compile(r"^[A-Za-z_][A-Za-z0-9_]*$")
 MEM_RE = re.compile(r"^\[\s*([Vv][0-7])(?:\s*([+-])\s*(0[xX][0-9a-fA-F]+|\d+))?\s*\]$")
@@ -122,6 +124,11 @@ def assemble_instruction(line, labels, pc):
         rd = parse_reg(operands[0])
         ra = parse_reg(operands[1])
         imm = parse_int(operands[2])
+    elif mnemonic in REDUCTIONS:
+        if len(operands) != 2:
+            raise ValueError("{} expects rd, ra".format(mnemonic))
+        rd = parse_reg(operands[0])
+        ra = parse_reg(operands[1])
     elif mnemonic in COMPARES:
         if len(operands) == 2:
             ra = parse_reg(operands[0])
@@ -205,6 +212,8 @@ def disassemble_word(word):
         return "{} v{}, v{}, v{}".format(mnemonic, rd, ra, rb)
     if mnemonic in SHIFTS:
         return "{} v{}, v{}, {}".format(mnemonic, rd, ra, imm)
+    if mnemonic in REDUCTIONS:
+        return "{} v{}, v{}".format(mnemonic, rd, ra)
     if mnemonic in COMPARES:
         return "{} v{}, v{}".format(mnemonic, ra, rb)
     if mnemonic == "VLOAD":

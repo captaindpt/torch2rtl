@@ -59,6 +59,7 @@
     3,
     2
   ],
+  "lanes": 4,
   "layer1_weights": [
     [
       0,
@@ -428,8 +429,9 @@
     "input_base": 16,
     "l1_base": 272,
     "l2_base": 4624,
+    "lanes": 4,
     "output_base": 5648,
     "zero_vec": 0
   },
-  "program_words": 1401
+  "program_words": 697
 }

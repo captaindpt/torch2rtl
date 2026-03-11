@@ -54,6 +54,7 @@ module gpu_top (
     wire [127:0] rf_data_b;
     wire [127:0] alu_src_b;
     wire [127:0] alu_result;
+    wire [127:0] exec_result;
     wire [127:0] wb_data;
     wire [127:0] lsu_load_data;
     wire [3:0]   lane_zero;
@@ -69,11 +70,24 @@ module gpu_top (
     wire [31:0] scalar_imm;
     wire [31:0] alu_imm32;
     wire [31:0] lsu_base_addr;
+    wire [33:0] reduce_sum_ext;
+    wire [31:0] reduce_sum32;
+    wire        dec_reduce_sum;
 
     assign scalar_imm = {{16{ctrl_immediate[15]}}, ctrl_immediate};
     assign alu_imm32 = {27'd0, ctrl_immediate[4:0]};
     assign alu_src_b = dec_use_imm ?
         {alu_imm32, alu_imm32, alu_imm32, alu_imm32} : rf_data_b;
+    assign dec_reduce_sum = (dec_opcode == `GPU_OP_VREDSUM);
+    assign reduce_sum_ext =
+        $signed({rf_data_a[31], rf_data_a[31:0]}) +
+        $signed({rf_data_a[63], rf_data_a[63:32]}) +
+        $signed({rf_data_a[95], rf_data_a[95:64]}) +
+        $signed({rf_data_a[127], rf_data_a[127:96]});
+    assign reduce_sum32 = reduce_sum_ext[31:0];
+    assign exec_result = dec_reduce_sum ?
+        {reduce_sum32, reduce_sum32, reduce_sum32, reduce_sum32} :
+        alu_result;
     assign pred_lane_results = {
         alu_result[96],
         alu_result[64],
@@ -81,7 +95,7 @@ module gpu_top (
         alu_result[0]
     };
     assign lsu_base_addr = rf_data_a[31:0] + scalar_imm;
-    assign wb_data = ctrl_wb_from_mem ? lsu_load_data : alu_result;
+    assign wb_data = ctrl_wb_from_mem ? lsu_load_data : exec_result;
 
     gpu_decoder decoder (
         .instr(instr_word),
