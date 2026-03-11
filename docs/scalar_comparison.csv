@@ -1,0 +1,13 @@
+metric,unit,vector_4lane,scalar_1lane,scalar_over_vector
+genus_cell_area,um^2,26494.056,7419.006,0.280025
+innovus_placed_cell_area,um^2,26397.270,7365.996,0.279044
+innovus_allocated_area,um^2,37873,10609,0.280120
+worst_setup_slack,ns,1.55,1.69,1.090323
+worst_hold_slack,ns,0.27,0.29,1.074074
+derived_critical_period,ns,8.45,8.31,0.983432
+derived_max_frequency,MHz,118.34,120.336943,1.016875
+genus_power,mW,0.623,0.0790622,0.126906
+fetched_instructions,count,1384,1384,1.000000
+cycles_per_inference,count,6169,4129,0.669314
+inference_latency,us,52.13,34.31199,0.658200
+energy_per_inference,nJ,32.45,2.712781,0.083599

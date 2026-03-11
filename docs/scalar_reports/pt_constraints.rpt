@@ -1,0 +1,262 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : gpu_top_scalar
+Version: W-2024.09-SP2
+Date   : Wed Mar 11 15:36:11 2026
+****************************************
+
+
+
+
+   max_transition
+
+                             Required        Actual
+   Pin                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1020/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1024/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   g23674__7482/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23702__7482/Y               0.28           0.46          -0.18  (VIOLATED)
+   g32282__6417/B0              0.28           0.46          -0.18  (VIOLATED)
+   g32360__6417/B0              0.28           0.46          -0.18  (VIOLATED)
+   g33141/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33142/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33287/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33359/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33579/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33581/B                     0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1009/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   g23697__8246/Y               0.28           0.46          -0.18  (VIOLATED)
+   g32281__7410/B0              0.28           0.46          -0.18  (VIOLATED)
+   g33140/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33286/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33578/B                     0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1031/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1034/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   g23703__4733/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23726__7098/Y               0.28           0.46          -0.18  (VIOLATED)
+   g32987/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32989/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g33135/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33137/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33288/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33360/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33584/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33586/B                     0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1010/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1013/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1015/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1017/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1023/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1027/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1032/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1033/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1036/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1038/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   g23698__7098/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23719__6783/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23721__1617/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23722__2802/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23724__5122/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23728__1881/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23730__7482/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23734__9945/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23735__2883/Y               0.28           0.46          -0.18  (VIOLATED)
+   g23737__1666/Y               0.28           0.46          -0.18  (VIOLATED)
+   g32979/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32980/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32982/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32983/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32984/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32985/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32986/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32988/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32990/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g32991/C0                    0.28           0.46          -0.18  (VIOLATED)
+   g33128/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33129/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33130/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33131/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33132/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33133/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33134/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33136/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33138/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33139/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33321/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33326/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33337/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33338/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33339/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33340/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33341/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33358/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33361/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33397/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33564/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33565/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33566/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33571/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33572/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33573/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33580/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33582/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33583/B                     0.28           0.46          -0.18  (VIOLATED)
+   g33585/B                     0.28           0.46          -0.18  (VIOLATED)
+   SUB_TC_OP_2_Y_SUB_TC_OP_1_Y_SUB_TC_OP21_Y_ADD_TC_OP_3_g1022/S0
+                                0.28           0.46          -0.18  (VIOLATED)
+   g23673__5115/Y               0.28           0.46          -0.18  (VIOLATED)
+   g32361__5477/B0              0.28           0.46          -0.18  (VIOLATED)
+   g33143/A0                    0.28           0.46          -0.18  (VIOLATED)
+   g33283/A1                    0.28           0.46          -0.18  (VIOLATED)
+   g33562/B                     0.28           0.46          -0.18  (VIOLATED)
+   g32261__5526/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32262__6783/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32263__3680/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32265__2802/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32267__5122/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32268__8246/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32269__7098/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32271__1881/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32273__7482/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32274__4733/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32275__6161/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32277__9945/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32279__2346/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32283__5477/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32285__5107/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32286__6260/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32287__4319/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32289__5526/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32291__3680/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32292__1617/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32293__2802/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32294__1705/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32296__8246/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32297__7098/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32298__6131/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32302__4733/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32304__9315/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32305__9945/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32306__2883/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32308__1666/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32309__7410/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32310__6417/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32333__5477/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32334__2398/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32335__5107/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32336__6260/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32337__4319/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32338__8428/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32339__5526/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32341__3680/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32342__1617/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32343__2802/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32344__1705/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32345__5122/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32346__8246/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32347__7098/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32352__4733/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32353__6161/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32354__9315/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32355__9945/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32356__2883/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32357__2346/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32358__1666/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32416__6131/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32418__5115/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32419__7482/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32420__4733/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32421__6161/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32422__9315/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32423__9945/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32429__5477/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32430__2398/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32431__5107/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32432__6260/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32433__4319/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32434__8428/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32435__5526/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32441__5122/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32442__8246/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32443__7098/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32444__6131/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32445__1881/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32446__5115/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32447__7482/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32454__1666/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32455__7410/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32456__6417/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32457__5477/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32458__2398/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32459__5107/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32460__6260/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32465__3680/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32466__1617/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32467__2802/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32468__1705/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32469__5122/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32470__8246/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32471__7098/A1              0.28           0.29          -0.01  (VIOLATED)
+   g32521__6783/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32522__3680/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32524__2802/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32525__1705/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32537__2883/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32538__2346/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32539__1666/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32540__7410/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32541__6417/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32542__5477/Y               0.28           0.29          -0.01  (VIOLATED)
+   g32543__2398/Y               0.28           0.29          -0.01  (VIOLATED)
+   control_add_97_46_Y_add_92_42_g716/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g717/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g718/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g719/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g720/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g721/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g722/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g723/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g724/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g725/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g726/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g727/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g728/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g729/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   control_add_97_46_Y_add_92_42_g745/B
+                                0.28           0.28           0.00  (VIOLATED: increase significant digits)
+   g23749__1617/Y               0.28           0.28           0.00  (VIOLATED: increase significant digits)
+
+
+1

@@ -8,16 +8,18 @@ import os
 import gpu_asm
 
 
-LANES = 4
 INPUTS = 16
 HIDDEN = 16
 OUTPUTS = 4
-VEC_BYTES = 16
 WORD_MASK = 0xFFFFFFFF
 
 
-def vec_addr(index):
-    return index * VEC_BYTES
+def vec_bytes(lanes):
+    return lanes * 4
+
+
+def vec_addr(index, lanes):
+    return index * vec_bytes(lanes)
 
 
 def signed32(value):
@@ -68,14 +70,16 @@ def reference_inference(inputs, w1, w2):
     return hidden_pre, hidden, outputs
 
 
-def build_layout():
+def build_layout(lanes):
+    slot_bytes = vec_bytes(lanes)
     zero_vec = 0
-    input_base = vec_addr(1)
-    l1_base = input_base + INPUTS * VEC_BYTES
-    hidden_base = l1_base + (HIDDEN * INPUTS * VEC_BYTES)
-    l2_base = hidden_base + (HIDDEN * VEC_BYTES)
-    output_base = l2_base + (OUTPUTS * HIDDEN * VEC_BYTES)
+    input_base = vec_addr(1, lanes)
+    l1_base = input_base + INPUTS * slot_bytes
+    hidden_base = l1_base + (HIDDEN * INPUTS * slot_bytes)
+    l2_base = hidden_base + (HIDDEN * slot_bytes)
+    output_base = l2_base + (OUTPUTS * HIDDEN * slot_bytes)
     return {
+        "lanes": lanes,
         "zero_vec": zero_vec,
         "input_base": input_base,
         "l1_base": l1_base,
@@ -86,7 +90,9 @@ def build_layout():
 
 
 def build_data_image(inputs, w1, w2, layout):
-    total_words = (layout["output_base"] + OUTPUTS * VEC_BYTES) // 4
+    lanes = layout["lanes"]
+    slot_bytes = vec_bytes(lanes)
+    total_words = (layout["output_base"] + OUTPUTS * slot_bytes) // 4
     words = [0] * total_words
 
     def store_vector(byte_addr, lanes):
@@ -94,53 +100,54 @@ def build_data_image(inputs, w1, w2, layout):
         for lane, value in enumerate(lanes):
             words[base + lane] = value & WORD_MASK
 
-    store_vector(layout["zero_vec"], [0, 0, 0, 0])
+    store_vector(layout["zero_vec"], [0] * lanes)
     for i, value in enumerate(inputs):
-        store_vector(layout["input_base"] + i * VEC_BYTES, [value] * LANES)
+        store_vector(layout["input_base"] + i * slot_bytes, [value] * lanes)
     for j in range(HIDDEN):
         for i in range(INPUTS):
-            store_vector(layout["l1_base"] + ((j * INPUTS) + i) * VEC_BYTES, [w1[j][i]] * LANES)
+            store_vector(layout["l1_base"] + ((j * INPUTS) + i) * slot_bytes, [w1[j][i]] * lanes)
     for o in range(OUTPUTS):
         for h in range(HIDDEN):
-            store_vector(layout["l2_base"] + ((o * HIDDEN) + h) * VEC_BYTES, [w2[o][h]] * LANES)
+            store_vector(layout["l2_base"] + ((o * HIDDEN) + h) * slot_bytes, [w2[o][h]] * lanes)
     return words
 
 
 def emit_program(layout):
+    slot_bytes = vec_bytes(layout["lanes"])
     lines = []
     for h in range(HIDDEN):
         lines.append("hidden_{}:".format(h))
         lines.append("VLOAD v1, [v0 + {}]".format(layout["zero_vec"]))
         for i in range(INPUTS):
-            lines.append("VLOAD v2, [v0 + {}]".format(layout["l1_base"] + ((h * INPUTS) + i) * VEC_BYTES))
-            lines.append("VLOAD v3, [v0 + {}]".format(layout["input_base"] + i * VEC_BYTES))
+            lines.append("VLOAD v2, [v0 + {}]".format(layout["l1_base"] + ((h * INPUTS) + i) * slot_bytes))
+            lines.append("VLOAD v3, [v0 + {}]".format(layout["input_base"] + i * slot_bytes))
             lines.append("VMUL v4, v2, v3")
             lines.append("VADD v1, v1, v4")
         lines.append("VCMPLT p0, v1, v0")
         lines.append("BRA hidden_{}_store_zero".format(h))
-        lines.append("VSTORE [v0 + {}], v1".format(layout["hidden_base"] + h * VEC_BYTES))
+        lines.append("VSTORE [v0 + {}], v1".format(layout["hidden_base"] + h * slot_bytes))
         lines.append("VCMPEQ p0, v0, v0")
         lines.append("BRA hidden_{}_done".format(h))
         lines.append("hidden_{}_store_zero:".format(h))
-        lines.append("VSTORE [v0 + {}], v0".format(layout["hidden_base"] + h * VEC_BYTES))
+        lines.append("VSTORE [v0 + {}], v0".format(layout["hidden_base"] + h * slot_bytes))
         lines.append("hidden_{}_done:".format(h))
 
     for o in range(OUTPUTS):
         lines.append("output_{}:".format(o))
         lines.append("VLOAD v1, [v0 + {}]".format(layout["zero_vec"]))
         for h in range(HIDDEN):
-            lines.append("VLOAD v2, [v0 + {}]".format(layout["l2_base"] + ((o * HIDDEN) + h) * VEC_BYTES))
-            lines.append("VLOAD v3, [v0 + {}]".format(layout["hidden_base"] + h * VEC_BYTES))
+            lines.append("VLOAD v2, [v0 + {}]".format(layout["l2_base"] + ((o * HIDDEN) + h) * slot_bytes))
+            lines.append("VLOAD v3, [v0 + {}]".format(layout["hidden_base"] + h * slot_bytes))
             lines.append("VMUL v4, v2, v3")
             lines.append("VADD v1, v1, v4")
-        lines.append("VSTORE [v0 + {}], v1".format(layout["output_base"] + o * VEC_BYTES))
+        lines.append("VSTORE [v0 + {}], v1".format(layout["output_base"] + o * slot_bytes))
 
     lines.append(".word 0xF0000000")
     return lines
 
 
-def simulate_program(words, data_words):
-    regs = [[0] * LANES for _ in range(8)]
+def simulate_program(words, data_words, lanes):
+    regs = [[0] * lanes for _ in range(8)]
     memory = list(data_words)
     pred = False
     pc = 0
@@ -161,25 +168,25 @@ def simulate_program(words, data_words):
         if opcode == gpu_asm.OPS["VLOAD"]:
             base = signed32(regs[ra][0]) + imm
             word_index = base // 4
-            regs[rd] = [signed32(memory[word_index + lane]) for lane in range(LANES)]
+            regs[rd] = [signed32(memory[word_index + lane]) for lane in range(lanes)]
             pc += 1
         elif opcode == gpu_asm.OPS["VSTORE"]:
             base = signed32(regs[ra][0]) + imm
             word_index = base // 4
-            for lane in range(LANES):
+            for lane in range(lanes):
                 memory[word_index + lane] = regs[rb][lane] & WORD_MASK
             pc += 1
         elif opcode == gpu_asm.OPS["VADD"]:
-            regs[rd] = [signed32(regs[ra][lane] + regs[rb][lane]) for lane in range(LANES)]
+            regs[rd] = [signed32(regs[ra][lane] + regs[rb][lane]) for lane in range(lanes)]
             pc += 1
         elif opcode == gpu_asm.OPS["VMUL"]:
-            regs[rd] = [signed32((regs[ra][lane] & 0xFFFF) * (regs[rb][lane] & 0xFFFF)) for lane in range(LANES)]
+            regs[rd] = [signed32((regs[ra][lane] & 0xFFFF) * (regs[rb][lane] & 0xFFFF)) for lane in range(lanes)]
             pc += 1
         elif opcode == gpu_asm.OPS["VCMPLT"]:
-            pred = all(signed32(regs[ra][lane]) < signed32(regs[rb][lane]) for lane in range(LANES))
+            pred = all(signed32(regs[ra][lane]) < signed32(regs[rb][lane]) for lane in range(lanes))
             pc += 1
         elif opcode == gpu_asm.OPS["VCMPEQ"]:
-            pred = all(signed32(regs[ra][lane]) == signed32(regs[rb][lane]) for lane in range(LANES))
+            pred = all(signed32(regs[ra][lane]) == signed32(regs[rb][lane]) for lane in range(lanes))
             pc += 1
         elif opcode == gpu_asm.OPS["BRA"]:
             pc = pc + imm if pred else pc + 1
@@ -201,6 +208,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model", help="optional .pt state_dict payload with fc1.weight, fc2.weight, input")
     parser.add_argument("--out-prefix", default="demo/mlp16x16x4", help="output prefix for asm/data/reference artifacts")
+    parser.add_argument("--lanes", type=int, default=4, choices=[1, 4], help="vector width to target")
     args = parser.parse_args()
 
     if args.model:
@@ -209,19 +217,20 @@ def main():
         inputs, w1, w2 = inline_model()
 
     hidden_pre, hidden, outputs = reference_inference(inputs, w1, w2)
-    layout = build_layout()
+    layout = build_layout(args.lanes)
     data_words = build_data_image(inputs, w1, w2, layout)
     asm_lines = emit_program(layout)
     program_words = gpu_asm.assemble(asm_lines)
-    sim_words = simulate_program(program_words, data_words)
+    sim_words = simulate_program(program_words, data_words, args.lanes)
 
     actual_outputs = []
+    slot_bytes = vec_bytes(args.lanes)
     for o in range(OUTPUTS):
-        base = (layout["output_base"] + o * VEC_BYTES) // 4
-        lanes = [signed32(sim_words[base + lane]) for lane in range(LANES)]
-        if len(set(lanes)) != 1:
-            raise RuntimeError("output {} lanes diverged: {}".format(o, lanes))
-        actual_outputs.append(lanes[0])
+        base = (layout["output_base"] + o * slot_bytes) // 4
+        lane_values = [signed32(sim_words[base + lane]) for lane in range(args.lanes)]
+        if len(set(lane_values)) != 1:
+            raise RuntimeError("output {} lanes diverged: {}".format(o, lane_values))
+        actual_outputs.append(lane_values[0])
 
     if actual_outputs != outputs:
         raise RuntimeError("reference/output mismatch: {} != {}".format(actual_outputs, outputs))
@@ -248,6 +257,7 @@ def main():
                 "hidden_pre_relu": hidden_pre,
                 "hidden_post_relu": hidden,
                 "expected_output": outputs,
+                "lanes": args.lanes,
                 "program_words": len(program_words),
                 "memory_map_bytes": layout,
             },

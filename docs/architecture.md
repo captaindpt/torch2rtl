@@ -4,9 +4,10 @@
 
 ## Top-Level Design Point
 
-- 4 SIMD lanes
+- 4-lane SIMD target: `rtl/gpu_top.v`
+- 1-lane scalar baseline: `rtl/gpu_top_scalar.v`
 - 32-bit integer datapath
-- 8 vector registers
+- 8 architectural registers
 - single shared fetch/decode/control path
 - scalarized external memory interface
 
@@ -22,6 +23,15 @@
 | `vector_regfile.v` | 8 x 4-lane x 32-bit vector register file |
 | `load_store_unit.v` | vector load/store sequencing |
 | `predicate_unit.v` | predicate reduction for uniform branches |
+
+Scalar baseline modules:
+
+| Module | Role |
+|------|------|
+| `gpu_top_scalar.v` | scalar top-level integration used for backend comparison |
+| `scalar/lane_cluster1.v` | single-lane execution cluster |
+| `scalar/vector_regfile_scalar.v` | 8 x 32-bit scalar register file |
+| `scalar/load_store_unit_scalar.v` | single-word load/store sequencing |
 
 ## ISA
 
@@ -73,6 +83,7 @@ The checked-in MLP demo uses:
 - program ROM image
 - data memory image
 - JSON reference outputs
+- scalar variants via `--lanes 1`
 
 ## Verification Targets
 
@@ -87,8 +98,9 @@ Primary benches:
 - `tb/tb_predicate_unit.v`
 - `tb/tb_gpu_top.v`
 - `tb/tb_gpu_inference.v`
+- `tb/tb_gpu_inference_scalar.v`
 
-`tb_gpu_inference.v` is the most complete proof because it runs the compiled MLP end to end.
+`tb_gpu_inference.v` and `tb_gpu_inference_scalar.v` are the end-to-end proofs because they run the compiled MLP on both backend targets.
 
 ## Synthesis Targets
 
@@ -99,5 +111,11 @@ The primary backend target is:
 - RTL: `rtl/gpu_top.v`
 - SDC: `constraints/gpu_top.sdc`
 - smoke bench: `tb/tb_gpu_top.v`
+
+The measured scalar comparison target is:
+
+- RTL: `rtl/gpu_top_scalar.v`
+- SDC: `constraints/gpu_top_scalar.sdc`
+- inference bench: `tb/tb_gpu_inference_scalar.v`
 
 Use `eda-pilot` for the validated RTL-to-GDS automation.
