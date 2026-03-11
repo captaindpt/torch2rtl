@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+xcelium.d/
+waves.shm/
+xrun.log
