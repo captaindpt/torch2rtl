@@ -5,30 +5,30 @@ xrun
 	-64bit
 	-access +rwc
 	-timescale 1ns/1ps
-	-incdir /home/v71349/torch2rtl
-	-incdir /home/v71349/torch2rtl/rtl
-	-incdir /home/v71349/torch2rtl/tb
-	-incdir /home/v71349/eda-pilot
-	-incdir /home/v71349/eda-pilot/rtl
-	-incdir /home/v71349/eda-pilot/tb
-	-incdir /home/v71349/eda-pilot/examples/gpu_top_scalar
-	-incdir /home/v71349/torch2rtl/rtl
-	-incdir /home/v71349/torch2rtl/tb
-	-l /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/xrun.log
-	/home/v71349/torch2rtl/rtl/gpu_top_scalar.v
-	/home/v71349/torch2rtl/tb/tb_gpu_inference_scalar.v
+	-incdir .
+	-incdir ./rtl
+	-incdir ./tb
+	-incdir ../eda-pilot
+	-incdir ../eda-pilot/rtl
+	-incdir ../eda-pilot/tb
+	-incdir ../eda-pilot/examples/gpu_top_scalar
+	-incdir ./rtl
+	-incdir ./tb
+	-l ../eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/xrun.log
+	./rtl/gpu_top_scalar.v
+	./tb/tb_gpu_inference_scalar.v
 	+dump_vcd
-	+vcd_file=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/gpu_top_scalar_activity.vcd
+	+vcd_file=../eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/gpu_top_scalar_activity.vcd
 
    User defined plus("+") options:
 	+dump_vcd
-	+vcd_file=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/gpu_top_scalar_activity.vcd
+	+vcd_file=../eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/gpu_top_scalar_activity.vcd
 
 xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
-xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/rtl (No such file or directory).
-xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/tb (No such file or directory).
-xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/examples/gpu_top_scalar (No such file or directory).
-file: /home/v71349/torch2rtl/rtl/gpu_top_scalar.v
+xmvlog: *W,NOTIND: unable to access -INCDIR ../eda-pilot/rtl (No such file or directory).
+xmvlog: *W,NOTIND: unable to access -INCDIR ../eda-pilot/tb (No such file or directory).
+xmvlog: *W,NOTIND: unable to access -INCDIR ../eda-pilot/examples/gpu_top_scalar (No such file or directory).
+file: ./rtl/gpu_top_scalar.v
 	module worklib.gpu_decoder:v
 		errors: 0, warnings: 0
 	module worklib.gpu_control:v
@@ -45,12 +45,12 @@ file: /home/v71349/torch2rtl/rtl/gpu_top_scalar.v
 		errors: 0, warnings: 0
 	module worklib.gpu_top_scalar:v
 		errors: 0, warnings: 0
-file: /home/v71349/torch2rtl/tb/tb_gpu_inference_scalar.v
+file: ./tb/tb_gpu_inference_scalar.v
 	module worklib.tb_gpu_inference_scalar:v
 		errors: 0, warnings: 0
-xmvlog: *W,SPDUSD: Include directory /home/v71349/torch2rtl given but not used.
-xmvlog: *W,SPDUSD: Include directory /home/v71349/torch2rtl/tb given but not used.
-xmvlog: *W,SPDUSD: Include directory /home/v71349/eda-pilot given but not used.
+xmvlog: *W,SPDUSD: Include directory . given but not used.
+xmvlog: *W,SPDUSD: Include directory ./tb given but not used.
+xmvlog: *W,SPDUSD: Include directory ../eda-pilot given but not used.
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 6
 		Caching library 'worklib' ....... Done

@@ -131,7 +131,7 @@ Those commands regenerate the source run directories from which the checked-in `
 
 ## Layout
 
-The placed-and-routed `gpu_top` on GPDK045 45nm — 27,124 um² cell area, ~10,800 standard cells.
+The placed-and-routed `gpu_top` on GPDK045 45nm — 27,182 um² cell area, ~10,800 standard cells.
 
 <p align="center">
   <img src="docs/images/post2_layout.png" alt="gpu_top placed and routed layout" width="600">
@@ -160,7 +160,7 @@ A minimal SIMD processor:
 
 - **4 parallel lanes**: each lane has a 32-bit integer ALU with multiply
 - **8 vector registers**: 4 lanes x 32 bits x 8 registers
-- **13-instruction ISA**: arithmetic (`VADD`, `VSUB`, `VMUL`), logic (`VAND`, `VOR`, `VXOR`), shifts (`VSHL`, `VSHR`), compares (`VCMPEQ`, `VCMPLT`), memory (`VLOAD`, `VSTORE`), control (`BRA`)
+- **14-instruction ISA**: arithmetic (`VADD`, `VSUB`, `VMUL`), logic (`VAND`, `VOR`, `VXOR`), shifts (`VSHL`, `VSHR`), compares (`VCMPEQ`, `VCMPLT`), memory (`VLOAD`, `VSTORE`), control (`BRA`), reduction (`VREDSUM`)
 - **Uniform branching**: predicate register `p0` drives branch decisions across all lanes
 - **Scalarized memory**: vector loads/stores decompose into per-lane transactions
 

@@ -39,7 +39,6 @@ model weights + input
 |------|------:|------:|------:|
 | Genus total cell area | `27123.678 um^2` | `7430.634 um^2` | `0.27x` |
 | Innovus placed cell area | `27181.818 um^2` | `7422.768 um^2` | `0.27x` |
-| Innovus allocated area | `38779.38 um^2` | `10629.36 um^2` | `0.27x` |
 | Worst setup slack | `-1.61 ns` | `-0.99 ns` | `0.61x` |
 | Worst hold slack | `0.32 ns` | `0.31 ns` | `0.97x` |
 | Derived critical period | `11.61 ns` | `10.99 ns` | `0.95x` |
@@ -58,8 +57,8 @@ Full machine-readable data is checked in at `docs/scalar_comparison.csv`. Backen
 
 - vector report bundle: `docs/vector_reports/` (from `eda-pilot/runs/digital-flow/20260312_100917_gpu_top`, with PrimeTime rerun in place after enabling propagated clocks)
 - scalar report bundle: `docs/scalar_reports/` (from `eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar`)
-- vector source run: `eda-pilot/flows/run_digital_flow.sh gpu_top`
-- scalar source run: `eda-pilot/flows/run_digital_flow.sh gpu_top_scalar`
+- vector source run: `~/eda-pilot/flows/run_digital_flow.sh gpu_top`
+- scalar source run: `~/eda-pilot/flows/run_digital_flow.sh gpu_top_scalar`
 
 ### File-Level Extraction Map
 
@@ -72,7 +71,6 @@ Full machine-readable data is checked in at `docs/scalar_comparison.csv`. Backen
 | Genus power | `docs/vector_reports/genus_power.rpt` | `docs/scalar_reports/genus_power.rpt` | `Subtotal` row, `Total` column, converted from W to mW |
 | Fetched instructions | `docs/vector_reports/rtl_sim.log` | `docs/scalar_reports/rtl_sim.log` | `PASS ... fetched=<n>` from the testbench `$display` line |
 | RTL cycles per inference | `docs/vector_reports/rtl_sim.log` | `docs/scalar_reports/rtl_sim.log` | `PASS ... cycles=<n>` from the testbench `$display` line |
-| Innovus allocated area | source run DEF for `gpu_top` | source run DEF for `gpu_top_scalar` | core box width x height from DEF `FE_CORE_BOX_*` properties, then copied into `docs/scalar_comparison.csv` |
 
 ### Derived Metrics
 
