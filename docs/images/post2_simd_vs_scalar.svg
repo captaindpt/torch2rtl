@@ -1936,13 +1936,13 @@ z
     </g>
    </g>
    <g id="text_15">
-    <!-- 34.31 μs -->
+    <!-- 45.38 μs -->
     <g style="fill: #7ec8c8" transform="translate(587.080112 287.851848) scale(0.11 -0.11)">
-     <use xlink:href="#DejaVuSans-Bold-33"/>
-     <use xlink:href="#DejaVuSans-Bold-34" transform="translate(69.580078 0)"/>
+     <use xlink:href="#DejaVuSans-Bold-34"/>
+     <use xlink:href="#DejaVuSans-Bold-35" transform="translate(69.580078 0)"/>
      <use xlink:href="#DejaVuSans-Bold-2e" transform="translate(139.160156 0)"/>
      <use xlink:href="#DejaVuSans-Bold-33" transform="translate(177.148438 0)"/>
-     <use xlink:href="#DejaVuSans-Bold-31" transform="translate(246.728516 0)"/>
+     <use xlink:href="#DejaVuSans-Bold-38" transform="translate(246.728516 0)"/>
      <use xlink:href="#DejaVuSans-Bold-20" transform="translate(316.308594 0)"/>
      <use xlink:href="#DejaVuSans-Bold-3bc" transform="translate(351.123047 0)"/>
      <use xlink:href="#DejaVuSans-Bold-73" transform="translate(424.707031 0)"/>
