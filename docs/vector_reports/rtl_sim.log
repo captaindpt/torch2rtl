@@ -1,5 +1,5 @@
 xrun(64): 25.09-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	25.09-s001: Started on Mar 11, 2026 at 16:08:11 EDT
+TOOL:	xrun(64)	25.09-s001: Started on Mar 12, 2026 at 10:09:17 EDT
 xrun
 	-clean
 	-64bit
@@ -14,9 +14,16 @@ xrun
 	-incdir /home/v71349/eda-pilot/examples/gpu_top
 	-incdir /home/v71349/torch2rtl/rtl
 	-incdir /home/v71349/torch2rtl/tb
-	-l /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/rtl-sim/xrun.log
+	-l /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/rtl-sim/xrun.log
 	/home/v71349/torch2rtl/rtl/gpu_top.v
 	/home/v71349/torch2rtl/tb/tb_gpu_inference.v
+	+dump_vcd
+	+vcd_file=/home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/rtl-sim/gpu_top_activity.vcd
+
+   User defined plus("+") options:
+	+dump_vcd
+	+vcd_file=/home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/rtl-sim/gpu_top_activity.vcd
+
 xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
 xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/rtl (No such file or directory).
 xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/tb (No such file or directory).
@@ -69,14 +76,14 @@ xmvlog: *W,SPDUSD: Include directory /home/v71349/eda-pilot given but not used.
 			streams:   1, words:  6974
 		worklib.gpu_top:v <0x4b53ded3>
 			streams:  11, words:  3710
-		worklib.tb_gpu_inference:v <0x2a1c6f11>
-			streams:  12, words: 12883
+		worklib.tb_gpu_inference:v <0x75da95f3>
+			streams:  12, words: 13712
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
 		Modules:                12       9
-		Registers:              71      53
+		Registers:              73      55
 		Scalar wires:           43       -
 		Expanded wires:        128       4
 		Vectored wires:         40       -
@@ -90,8 +97,8 @@ xmvlog: *W,SPDUSD: Include directory /home/v71349/eda-pilot given but not used.
 Loading snapshot worklib.tb_gpu_inference:v .................... Done
 xcelium> source /CMC/tools/cadence/XCELIUMMAIN25.09.001_lnx86/tools/xcelium/files/xmsimrc
 xcelium> run
-PASS tb_gpu_inference (17 checks, cycles=2841, fetched=680)
-Simulation complete via $finish(1) at time 28426 NS + 0
-./tb/tb_gpu_inference.v:131         $finish;
+PASS tb_gpu_inference (5 checks, cycles=1935, fetched=482)
+Simulation complete via $finish(1) at time 19366 NS + 0
+./tb/tb_gpu_inference.v:146         $finish;
 xcelium> exit
-TOOL:	xrun(64)	25.09-s001: Exiting on Mar 11, 2026 at 16:08:13 EDT  (total: 00:00:02)
+TOOL:	xrun(64)	25.09-s001: Exiting on Mar 12, 2026 at 10:09:19 EDT  (total: 00:00:02)

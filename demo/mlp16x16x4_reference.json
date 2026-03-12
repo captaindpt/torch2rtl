@@ -430,8 +430,9 @@
     "l1_base": 272,
     "l2_base": 4624,
     "lanes": 4,
-    "output_base": 5648,
+    "output_base": 4880,
+    "output_slots": 1,
     "zero_vec": 0
   },
-  "program_words": 697
+  "program_words": 499
 }

@@ -28,6 +28,8 @@ module tb_gpu_inference_scalar;
     integer fetched;
     integer tests;
     integer failures;
+    reg dump_vcd;
+    reg [1023:0] vcd_file;
 
     gpu_top_scalar dut (
         .clk(clk),
@@ -73,6 +75,15 @@ module tb_gpu_inference_scalar;
         fetched = 0;
         tests = 0;
         failures = 0;
+        dump_vcd = 1'b0;
+        vcd_file = "gpu_top_scalar_activity.vcd";
+
+        if ($test$plusargs("dump_vcd")) begin
+            dump_vcd = 1'b1;
+            if (!$value$plusargs("vcd_file=%s", vcd_file)) begin
+                vcd_file = "gpu_top_scalar_activity.vcd";
+            end
+        end
 
         expected[0] = 32'd195;
         expected[1] = 32'd189;
@@ -92,6 +103,10 @@ module tb_gpu_inference_scalar;
         repeat (2) @(posedge clk);
         rst = 1'b0;
         #1;
+        if (dump_vcd) begin
+            $dumpfile(vcd_file);
+            $dumpvars(0, dut);
+        end
 
         while (!halted && cycles < 40000) begin
             @(posedge clk);
@@ -130,6 +145,9 @@ module tb_gpu_inference_scalar;
             );
         end
 
+        if (dump_vcd) begin
+            $dumpoff;
+        end
         $finish;
     end
 endmodule

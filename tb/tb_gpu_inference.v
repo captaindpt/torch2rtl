@@ -3,7 +3,7 @@
 module tb_gpu_inference;
     localparam integer ROM_WORDS = 2048;
     localparam integer DMEM_WORDS = 2048;
-    localparam integer OUTPUT_BASE_WORD = 1412;
+    localparam integer OUTPUT_BASE_WORD = 1220;
 
     reg clk;
     reg rst;
@@ -29,6 +29,8 @@ module tb_gpu_inference;
     integer fetched;
     integer tests;
     integer failures;
+    reg dump_vcd;
+    reg [1023:0] vcd_file;
 
     gpu_top dut (
         .clk(clk),
@@ -74,6 +76,15 @@ module tb_gpu_inference;
         fetched = 0;
         tests = 0;
         failures = 0;
+        dump_vcd = 1'b0;
+        vcd_file = "gpu_top_activity.vcd";
+
+        if ($test$plusargs("dump_vcd")) begin
+            dump_vcd = 1'b1;
+            if (!$value$plusargs("vcd_file=%s", vcd_file)) begin
+                vcd_file = "gpu_top_activity.vcd";
+            end
+        end
 
         expected[0] = 32'd195;
         expected[1] = 32'd189;
@@ -93,6 +104,10 @@ module tb_gpu_inference;
         repeat (2) @(posedge clk);
         rst = 1'b0;
         #1;
+        if (dump_vcd) begin
+            $dumpfile(vcd_file);
+            $dumpvars(0, dut);
+        end
 
         while (!halted && cycles < 40000) begin
             @(posedge clk);
@@ -107,18 +122,15 @@ module tb_gpu_inference;
         end
 
         for (out_idx = 0; out_idx < 4; out_idx = out_idx + 1) begin
-            for (lane = 0; lane < 4; lane = lane + 1) begin
-                tests = tests + 1;
-                if (dmem[OUTPUT_BASE_WORD + (out_idx * 4) + lane] !== expected[out_idx]) begin
-                    failures = failures + 1;
-                    $display(
-                        "FAIL output%0d lane%0d got=%0d exp=%0d",
-                        out_idx,
-                        lane,
-                        dmem[OUTPUT_BASE_WORD + (out_idx * 4) + lane],
-                        expected[out_idx]
-                    );
-                end
+            tests = tests + 1;
+            if (dmem[OUTPUT_BASE_WORD + out_idx] !== expected[out_idx]) begin
+                failures = failures + 1;
+                $display(
+                    "FAIL output%0d got=%0d exp=%0d",
+                    out_idx,
+                    dmem[OUTPUT_BASE_WORD + out_idx],
+                    expected[out_idx]
+                );
             end
         end
 
@@ -128,6 +140,9 @@ module tb_gpu_inference;
             $display("FAIL tb_gpu_inference (%0d failures out of %0d checks, cycles=%0d, fetched=%0d)", failures, tests, cycles, fetched);
         end
 
+        if (dump_vcd) begin
+            $dumpoff;
+        end
         $finish;
     end
 endmodule

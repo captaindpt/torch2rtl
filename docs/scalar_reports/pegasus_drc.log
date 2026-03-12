@@ -1,33 +1,33 @@
-Pegasus 23.26-s005 yR5+5JOGoFD41eqkI3/4VA 2026-03-11 15:36:11 3576678 vcl-vm0-159
+Pegasus 23.26-s005 yR5+5JOGoFD41eqkI3/4VA 2026-03-12 10:31:06 3849182 vcl-vm0-159
 Copyright 2024 Cadence Design Systems, Inc.
 All rights reserved worldwide.
 
-INFO:    Command Line Options: -drc -log /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/gpu_top_scalar_drc.log -run_dir /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/run /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/scripts/gpu_top_scalar_pegasus_drc.rul
+INFO:    Command Line Options: -drc -log /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/gpu_top_scalar_drc.log -run_dir /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/run /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/scripts/gpu_top_scalar_pegasus_drc.rul
 INFO:    Launch host CPU: Model: Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, OS: Rocky Linux release 8.10 (Green Obsidian), Logical cores: 4, Physical cores: 4, Cache: 36608 KB, CPU Speed: 2992.97 MHz
-         Launch host Memory: MemTotal: 15477 MB,  MemFree: 1591 MB,  SwapTotal: 16379 MB,  SwapFree: 16307 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 61 MB
+         Launch host Memory: MemTotal: 15477 MB,  MemFree: 3782 MB,  SwapTotal: 16379 MB,  SwapFree: 16304 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 62 MB
 INFO:    Current path: /home/v71349/torch2rtl
-INFO:    Run directory: /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/run
-INFO:    Log directory: /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/run/pegasus-1773257771-vcl-vm0-159-3576678
+INFO:    Run directory: /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/run
+INFO:    Log directory: /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/run/pegasus-1773325866-vcl-vm0-159-3849182
 INFO:    PVL parsing results:
 
-INFO:    See "/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/run/pegasus-1773257771-vcl-vm0-159-3576678/pvl.log" for additional details.
+INFO:    See "/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/run/pegasus-1773325866-vcl-vm0-159-3849182/pvl.log" for additional details.
 
 INFO:    Checking out 1 license(s) of feature: 'Pegasus_DRC' version 23.2
-INFO:    License checkout successful ... 2026-03-11 15:36:15
+INFO:    License checkout successful ... 2026-03-12 10:31:09
 
 INFO:    Checking out 1 license(s) of feature: 'Pegasus_16nm' version 23.2
-INFO:    License checkout successful ... 2026-03-11 15:36:15
+INFO:    License checkout successful ... 2026-03-12 10:31:10
 INFO:    Worker 0 started on host vcl-vm0-159 with 1 cpu(s)
          CPU: Model: Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, OS: Red Hat Enterprise Linux release 8.10 (Ootpa), Logical cores: 4, Physical cores: 4, Cache: 36608 KB, CPU Speed: 2992.97 MHz
-         Memory: MemTotal: 15477 MB,  MemFree: 1508 MB,  SwapTotal: 16379 MB,  SwapFree: 16307 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 61 MB
+         Memory: MemTotal: 15477 MB,  MemFree: 3774 MB,  SwapTotal: 16379 MB,  SwapFree: 16304 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 61 MB
 
 INFO:    Gdsii input summary
-         File name: /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/innovus/out/gpu_top_scalar.gds
-         File size: 3903668
+         File name: /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/innovus/out/gpu_top_scalar.gds
+         File size: 3904572
          Version: 5.0
          Library name: DesignLib
-         Last modified: 2026-3-11 15:35:55
-         Last accessed: 2026-3-11 15:35:55
+         Last modified: 2026-3-12 10:30:36
+         Last accessed: 2026-3-12 10:30:36
          Database unit in user units: 0.0005
          Database unit in meters: 5e-10
          Magnification: 1 
@@ -36,136 +36,140 @@ INFO:    Cell Summary:
          ----------------------------------------------------------------------------
              CELL              INSTANCE    GEOMETRY      LABELS        HREF        FREF
          ----------------------------------------------------------------------------
-         INVX1                        0          32           0         229         229
-         INVX2                        0          41           0          15          15
+         BUFX2                        0          50           0           2           2
+         CLKBUFX4                     0          71           0          18          18
+         INVX1                        0          32           0         240         240
          INVXL                        0          29           0          16          16
-         MX2X1                        0          68           0           8           8
-         CLKMX2X2                     0          77           0           1           1
-         AND2X1                       0          48           0          48          48
-         NAND4XL                      0          52           0          39          39
-         AO21X1                       0          63           0           1           1
-         OR2X1                        0          49           0          31          31
-         NAND2X1                      0          42           0         235         235
-         AOI221X1                     0          73           0         152         152
-         NOR2BX1                      0          47           0          37          37
-         NAND2XL                      0          37           0          98          98
-         OAI22X1                      0          64           0         190         190
-         AOI22XL                      0          55           0         197         197
-         AOI22X1                      0          63           0         211         211
+         INVX2                        0          41           0          15          15
+         MX2X1                        0          68           0           7           7
+         CLKMX2X2                     0          77           0           2           2
+         AND2X1                       0          48           0          45          45
+         NAND4XL                      0          52           0          42          42
+         OR2X1                        0          49           0          32          32
+         NAND2X1                      0          42           0         242         242
+         NOR2BX1                      0          47           0          39          39
+         AOI221X1                     0          73           0         147         147
+         NAND2XL                      0          37           0          82          82
+         OAI22X1                      0          64           0         195         195
+         AOI22X1                      0          63           0         215         215
          AO22XL                       0          67           0          72          72
-         OR4X1                        0          63           0           5           5
-         NAND2BX1                     0          48           0          20          20
-         NOR4X1                       0          56           0           7           7
-         OAI21XL                      0          48           0           1           1
-         OR2XL                        0          44           0           5           5
+         AOI22XL                      0          55           0         201         201
+         OR4X1                        0          63           0           7           7
+         NOR4X1                       0          56           0           6           6
+         AOI31X1                      0          65           0           5           5
+         OAI21X1                      0          56           0         113         113
+         NAND2BX1                     0          48           0          14          14
+         NOR2X1                       0          43           0         156         156
+         AND2X2                       0          56           0          10          10
          NOR2X2                       0          57           0           4           4
-         AND2X2                       0          56           0           7           7
-         OR3X1                        0          56           0           2           2
-         NOR2X1                       0          43           0         159         159
-         NOR2XL                       0          37           0          49          49
+         OR3X1                        0          56           0           3           3
+         NOR2XL                       0          37           0          46          46
          AND2XL                       0          44           0           3           3
-         DFFHQX1                      0         120           0         389         389
+         DFFHQX1                      0         120           0         390         390
          DFFQX2                       0         129           0          29          29
          SDFFQX1                      0         157           0           1           1
-         OAI21X1                      0          56           0         115         115
-         MXI2XL                       0          60           0          87          87
-         AOI222X1                     0          79           0          31          31
-         OAI2BB1X1                    0          56           0          37          37
-         AOI21X1                      0          54           0          23          23
-         OAI211X1                     0          62           0          58          58
-         OAI222X1                     0          78           0          27          27
-         AOI31X1                      0          65           0           1           1
-         OAI31X1                      0          65           0           2           2
-         OAI221X1                     0          72           0          21          21
+         MXI2XL                       0          60           0          83          83
+         OAI2BB1X1                    0          56           0          39          39
+         AOI21X1                      0          54           0          26          26
          AOI211XL                     0          55           0           4           4
-         AND3XL                       0          53           0           1           1
-         OA22X1                       0          68           0           4           4
-         NAND4BX1                     0          63           0           4           4
-         OAI22XL                      0          55           0          14          14
-         NOR3X1                       0          54           0           3           3
-         AOI21XL                      0          48           0           2           2
-         AOI32X1                      0          72           0           3           3
-         AOI33XL                      0          68           0           1           1
+         OAI211X1                     0          62           0          59          59
+         OAI222X1                     0          78           0          29          29
+         AOI222X1                     0          79           0          30          30
+         OAI21XL                      0          48           0           3           3
+         OAI221X1                     0          72           0          18          18
+         OA22X1                       0          68           0           5           5
+         OR2XL                        0          44           0           4           4
          NAND3BXL                     0          51           0           3           3
+         AOI21XL                      0          48           0           2           2
+         AOI33XL                      0          68           0           1           1
+         NOR3X1                       0          54           0           4           4
+         OAI31X1                      0          65           0           2           2
+         AOI32X1                      0          72           0           3           3
+         OAI32X1                      0          78           0           1           1
+         AND3X2                       0          65           0           1           1
          NAND3XL                      0          46           0           1           1
-         NAND4X1                      0          57           0          28          28
-         NAND3BX1                     0          59           0           3           3
-         AND3X2                       0          65           0           2           2
+         NAND4X1                      0          57           0          22          22
+         NAND3BX1                     0          59           0           4           4
          NAND3X1                      0          52           0           1           1
-         OA21X1                       0          63           0           1           1
-         OR3X4                        0          87           0           1           1
-         XNOR2X1                      0          69           0          38          38
+         XNOR2X1                      0          69           0          44          44
+         NOR3BX1                      0          61           0           1           1
+         AND3X1                       0          57           0           1           1
          OR2X2                        0          55           0           1           1
-         DFFX1                        0         146           0           1           1
-         NAND4X2                      0          80           0           1           1
+         OR2X4                        0          82           0           1           1
+         NAND4X2                      0          80           0           3           3
+         NAND4BX1                     0          63           0           2           2
          XOR2XL                       0          68           0           1           1
          ADDFX1                       0         133           0         195         195
-         MX2XL                        0          65           0          26          26
+         MX2XL                        0          65           0          24          24
          AOI2BB1XL                    0          58           0           1           1
          AOI2BB1X1                    0          57           0           1           1
+         OAI22XL                      0          55           0          10          10
          OAI33X1                      0          72           0           1           1
          NAND2BXL                     0          44           0           1           1
          NAND2X2                      0          59           0           1           1
          XNOR3X1                      0         154           6           1           1
          NAND2BX2                     0          67           0           1           1
-         M2_M1_2x1_HV_E               0           4           0        1213        1213
-         M3_M2_2x1_VH_E               0           1           0        3205        3205
-         M2_M1_1x2_HV_S               0           4           0        2574        2574
-         M3_M2_1x2_VH_N               0           1           0        1219        1219
-         M2_M1_1x2_HV_N               0           4           0        3187        3187
-         M2_M1_2x1_HH_E               0           4           0         217         217
-         M3_M2_2x1_VH_W               0           1           0        2748        2748
-         M2_M1_2x1_HV_W               0           4           0        1178        1178
-         M2_M1_HV                     0           3           0        1108        1108
-         M4_M3_2x1_HV_W               0           1           0         833         833
-         M5_M4_2x1_VH_W               0           1           0         288         288
-         M4_M3_2x1_HV_E               0           1           0        1331        1331
-         M4_M3_1x2_HV_N               0           1           0         272         272
-         M3_M2_1x2_VH_S               0           1           0         792         792
-         M5_M4_1x2_VH_N               0           1           0          61          61
-         M6_M5_1x2_HV_N               0           0           0          32          32
-         M6_M5_2x1_HV_E               0           0           0          88          88
-         M2_M1_1x2_VV_N               0           4           0         726         726
-         M2_M1_2x1_HH_W               0           4           0         134         134
-         M5_M4_2x1_VH_E               0           1           0         360         360
-         M2_M1_HH                     0           3           0          65          65
-         M6_M5_2x1_HV_W               0           0           0          69          69
+         M2_M1_HV                     0           3           0        1177        1177
+         M3_M2_2x1_VH_E               0           1           0        3380        3380
+         M3_M2_1x2_VH_N               0           1           0        1157        1157
+         M4_M3_2x1_HV_W               0           1           0         921         921
+         M2_M1_1x2_HV_N               0           4           0        3228        3228
+         M4_M3_1x2_HV_S               0           1           0         267         267
+         M3_M2_2x1_VH_W               0           1           0        2659        2659
+         M2_M1_2x1_HV_W               0           4           0        1095        1095
+         M2_M1_1x2_HV_S               0           4           0        2753        2753
+         M4_M3_2x1_HV_E               0           1           0        1383        1383
+         M2_M1_1x2_VV_N               0           4           0         719         719
+         M3_M2_1x2_VH_S               0           1           0         807         807
+         M2_M1_1x2_VV_S               0           4           0         634         634
+         M2_M1_HH                     0           3           0          38          38
+         M4_M3_1x2_HV_N               0           1           0         319         319
+         M2_M1_2x1_HH_W               0           4           0         128         128
          M3_M2_VH                     0           1           0         176         176
-         M2_M1_1x2_VV_S               0           4           0         642         642
-         M4_M3_HV                     0           1           0          29          29
-         M2_M1_1x2_VV_C               0           4           0         221         221
-         M4_M3_1x2_HV_S               0           1           0         199         199
-         M2_M1_VV                     0           3           0          76          76
-         M6_M5_1x2_HV_S               0           0           0          18          18
-         M3_M2_HH                     0           1           0          41          41
-         M2_M1_2x1_HH_C               0           4           0         352         352
-         M3_M2_HV                     0           1           0           5           5
-         M5_M4_1x2_VH_S               0           1           0          44          44
-         M7_M6_1x2_VH_N               0           0           0           2           2
+         M4_M3_HV                     0           1           0          14          14
+         M6_M5_2x1_HV_E               0           0           0         104         104
+         M5_M4_1x2_VH_N               0           1           0          85          85
+         M6_M5_1x2_HV_N               0           0           0          32          32
+         M5_M4_2x1_VH_W               0           1           0         325         325
+         M5_M4_2x1_VH_E               0           1           0         436         436
+         M2_M1_2x1_HV_E               0           4           0        1130        1130
+         M5_M4_HH                     0           1           0           5           5
+         M3_M2_HH                     0           1           0          45          45
+         M4_M3_VH                     0           1           0           2           2
+         M5_M4_1x2_VH_S               0           1           0          82          82
+         M6_M5_2x1_HV_W               0           0           0          75          75
+         M2_M1_1x2_VV_C               0           4           0         217         217
+         M2_M1_2x1_HH_E               0           4           0         232         232
+         M2_M1_2x1_HH_C               0           4           0         366         366
+         M2_M1_VV                     0           3           0          75          75
+         M2_M1_VH                     0           3           0           9           9
+         M6_M5_1x2_HV_S               0           0           0          25          25
+         M4_M3_HH                     0           1           0           6           6
+         M3_M2_VV                     0           1           0           1           1
+         M3_M2_HV                     0           1           0           4           4
+         M7_M6_2x1_VH_E               0           0           0          19          19
+         M7_M6_2x1_VH_W               0           0           0          17          17
+         M5_M4_VH                     0           1           0           1           1
+         M6_M5_HV                     0           0           0           1           1
+         M7_M6_1x2_VH_N               0           0           0           1           1
          M8_M7_1x2_HV_N               0           3           0           1           1
-         M8_M7_2x1_HV_E               0           3           0           1           1
-         M7_M6_2x1_VH_W               0           0           0          10          10
-         M2_M1_VH                     0           3           0          12          12
-         M4_M3_HH                     0           1           0           5           5
-         M4_M3_VH                     0           1           0           1           1
-         M7_M6_2x1_VH_E               0           0           0          10          10
-         M5_M4_HH                     0           1           0           3           3
-         gpu_top_scalar           26557        5907           0           1           1
+         M8_M7_1x2_HV_S               0           3           0           1           1
+         gpu_top_scalar           27186        5522           0           1           1
          ----------------------------------------------------------------------------
-         TOTAL CELL = 115;  INSTANCE = 26557;  GEOMETRY = 10639;  LABEL = 6
+         TOTAL CELL = 119;  INSTANCE = 27186;  GEOMETRY = 10243;  LABEL = 6
 
 INFO:    Layer Summary:
          ----------------------------------------------------------------------------
              LAYER                              ID       HPN      HTC        FPN       FTC
          ----------------------------------------------------------------------------
          Bondpad                              1000         0         0         0         0
-         CapMetal                             1001        14         0     11705         0
-         Cont                                 1002      2326         0    104474         0
+         CapMetal                             1001        14         0     11801         0
+         Cont                                 1002      2316         0    105620         0
          ESDdummy                             1003         0         0         0         0
          INDdummy                             1004         0         0         0         0
          M1Resdum                             1005         0         0         0         0
          M2Resdum                             1006         0         0         0         0
-         M3Resdum                             1007        12         0      3426         0
+         M3Resdum                             1007        13         0      3846         0
          M4Resdum                             1008         0         0         0         0
          M5Resdum                             1009         0         0         0         0
          M6Resdum                             1010         0         0         0         0
@@ -174,12 +178,12 @@ INFO:    Layer Summary:
          M9Resdum                             1013         0         0         0         0
          M10Resdum                            1014         0         0         0         0
          M11Resdum                            1015         0         0         0         0
-         Metal1                               1016      1297         0     54662         0
+         Metal1                               1016      1299         0     55025         0
          Metal2                               1017         0         0         0         0
          Metal3                               1018         0         0         0         0
          Metal4                               1019         0         0         0         0
          Metal5                               1020         0         0         0         0
-         Metal6                               1021        21         0     19891         0
+         Metal6                               1021        22         0     20030         0
          Metal7                               1022         0         0         0         0
          Metal8                               1023         0         0         0         0
          Metal9                               1024         0         0         0         0
@@ -188,22 +192,22 @@ INFO:    Layer Summary:
          NPNdummy                             1027         0         0         0         0
          Nburied                              1028         0         0         0         0
          Nhvt                                 1029         0         0         0         0
-         Nimp                                 1030       144         0      6018         0
-         Nlvt                                 1031        24         0     22149         0
-         Nwell                                1032        72         0      3009         0
+         Nimp                                 1030       146         0      6068         0
+         Nlvt                                 1031        24         0     22303         0
+         Nwell                                1032        73         0      3034         0
          Nzvt                                 1033         0         0         0         0
-         Oxide                                1034       319         0     13777         0
+         Oxide                                1034       317         0     13872         0
          Oxide_thk                            1035         0         0         0         0
          PNPdummy                             1036         0         0         0         0
          Phvt                                 1037         0         0         0         0
-         Pimp                                 1038       144         0      6018         0
+         Pimp                                 1038       146         0      6068         0
          Plvt                                 1039         0         0         0         0
-         Poly                                 1040       353         0     16806         0
+         Poly                                 1040       345         0     16881         0
          Psub                                 1041         0         0         0         0
-         ResWdum                              1042      4258         0      4258         0
+         ResWdum                              1042      4201         0      4201         0
          Resdum                               1043         0         0         0         0
          SiProt                               1044         0         0         0         0
-         Via1                                 1045      1649         0      1649         0
+         Via1                                 1045      1321         0      1321         0
          Via2                                 1046         0         0         0         0
          Via3                                 1047         0         0         0         0
          Via4                                 1048         0         0         0         0
@@ -227,7 +231,7 @@ INFO:    Layer Summary:
          poly_conn_text                       1066         0         0         0         0
          ----------------------------------------------------------------------------
 
-INFO:    CHIP EXTENT: 29880 19440 226520 229390
+INFO:    CHIP EXTENT: 26280 19440 214920 226040
 
 
 INFO:    Ports ...
@@ -277,83 +281,86 @@ INFO:    Layer Summary(Texts For DFM_TEXT):
          ----------------------------------------------------------------------------
 
 INFO:    Expanded Cell Summary
-         M6_M5_1x2_HV_N is expanded.
          M6_M5_2x1_HV_E is expanded.
+         M6_M5_1x2_HV_N is expanded.
          M6_M5_2x1_HV_W is expanded.
          M6_M5_1x2_HV_S is expanded.
-         M7_M6_1x2_VH_N is expanded.
-         M7_M6_2x1_VH_W is expanded.
          M7_M6_2x1_VH_E is expanded.
+         M7_M6_2x1_VH_W is expanded.
+         M6_M5_HV is expanded.
+         M7_M6_1x2_VH_N is expanded.
          M3_M2_2x1_VH_E is expanded.
          M3_M2_1x2_VH_N is expanded.
-         M3_M2_2x1_VH_W is expanded.
          M4_M3_2x1_HV_W is expanded.
-         M5_M4_2x1_VH_W is expanded.
+         M4_M3_1x2_HV_S is expanded.
+         M3_M2_2x1_VH_W is expanded.
          M4_M3_2x1_HV_E is expanded.
-         M4_M3_1x2_HV_N is expanded.
          M3_M2_1x2_VH_S is expanded.
-         M5_M4_1x2_VH_N is expanded.
-         M5_M4_2x1_VH_E is expanded.
+         M4_M3_1x2_HV_N is expanded.
          M3_M2_VH is expanded.
          M4_M3_HV is expanded.
-         M4_M3_1x2_HV_S is expanded.
+         M5_M4_1x2_VH_N is expanded.
+         M5_M4_2x1_VH_W is expanded.
+         M5_M4_2x1_VH_E is expanded.
+         M5_M4_HH is expanded.
          M3_M2_HH is expanded.
-         M3_M2_HV is expanded.
+         M4_M3_VH is expanded.
          M5_M4_1x2_VH_S is expanded.
          M4_M3_HH is expanded.
-         M4_M3_VH is expanded.
-         M5_M4_HH is expanded.
+         M3_M2_VV is expanded.
+         M3_M2_HV is expanded.
+         M5_M4_VH is expanded.
          M8_M7_1x2_HV_N is expanded.
-         M8_M7_2x1_HV_E is expanded.
-         INVX2 is expanded.
+         M8_M7_1x2_HV_S is expanded.
+         BUFX2 is expanded.
          INVXL is expanded.
+         INVX2 is expanded.
          MX2X1 is expanded.
          CLKMX2X2 is expanded.
-         AO21X1 is expanded.
          OR4X1 is expanded.
-         NAND2BX1 is expanded.
          NOR4X1 is expanded.
-         OAI21XL is expanded.
-         OR2XL is expanded.
-         NOR2X2 is expanded.
+         AOI31X1 is expanded.
+         NAND2BX1 is expanded.
          AND2X2 is expanded.
+         NOR2X2 is expanded.
          OR3X1 is expanded.
          AND2XL is expanded.
          SDFFQX1 is expanded.
-         AOI31X1 is expanded.
-         OAI31X1 is expanded.
          AOI211XL is expanded.
-         AND3XL is expanded.
+         OAI21XL is expanded.
          OA22X1 is expanded.
-         NAND4BX1 is expanded.
-         OAI22XL is expanded.
-         NOR3X1 is expanded.
-         AOI21XL is expanded.
-         AOI32X1 is expanded.
-         AOI33XL is expanded.
+         OR2XL is expanded.
          NAND3BXL is expanded.
+         AOI21XL is expanded.
+         AOI33XL is expanded.
+         NOR3X1 is expanded.
+         OAI31X1 is expanded.
+         AOI32X1 is expanded.
+         OAI32X1 is expanded.
+         AND3X2 is expanded.
          NAND3XL is expanded.
          NAND3BX1 is expanded.
-         AND3X2 is expanded.
          NAND3X1 is expanded.
-         OA21X1 is expanded.
-         OR3X4 is expanded.
+         NOR3BX1 is expanded.
+         AND3X1 is expanded.
          OR2X2 is expanded.
-         DFFX1 is expanded.
+         OR2X4 is expanded.
          NAND4X2 is expanded.
+         NAND4BX1 is expanded.
          XOR2XL is expanded.
          AOI2BB1XL is expanded.
          AOI2BB1X1 is expanded.
+         OAI22XL is expanded.
          OAI33X1 is expanded.
          NAND2BXL is expanded.
          NAND2X2 is expanded.
          XNOR3X1 is expanded.
          NAND2BX2 is expanded.
-         M2_M1_2x1_HH_E is expanded.
          M2_M1_HV is expanded.
-         M2_M1_2x1_HH_W is expanded.
          M2_M1_HH is expanded.
+         M2_M1_2x1_HH_W is expanded.
          M2_M1_1x2_VV_C is expanded.
+         M2_M1_2x1_HH_E is expanded.
          M2_M1_VV is expanded.
          M2_M1_VH is expanded.
 INFO:    Rule offgrid_check completed with no violations, 1/562
@@ -429,7 +436,7 @@ INFO:    Rule BONDPAD.B.1A_11 completed with no violations, 70/562
 INFO:    Rule soft_check_3 completed with no violations, 71/562
 INFO:    Rule soft_check_6 completed with no violations, 72/562
 INFO:    Rule soft_check_9 completed with no violations, 73/562
-INFO:    Rule soft_check_12 completed with 32 violations, 74/562
+INFO:    Rule soft_check_12 completed with 22 violations, 74/562
 INFO:    Rule soft_check_15 completed with no violations, 75/562
 INFO:    Rule soft_check_18 completed with no violations, 76/562
 INFO:    Rule NBL.W.1 completed with no violations, 77/562
@@ -439,9 +446,9 @@ INFO:    Rule NBL.SE.1 completed with no violations, 80/562
 INFO:    Rule NBL.SE.2 completed with no violations, 81/562
 INFO:    Rule NBL.SE.3 completed with no violations, 82/562
 INFO:    Rule NBL.SE.4 completed with no violations, 83/562
-INFO:    Rule NW.SP.2 completed with 57 violations, 84/562
+INFO:    Rule NW.SP.2 completed with 46 violations, 84/562
 INFO:    Rule NW.SP.2_2 completed with 1000 violations, 85/562
-INFO:    Rule NW.W.1 completed with 97 violations, 86/562
+INFO:    Rule NW.W.1 completed with 53 violations, 86/562
 INFO:    Rule NW.SE.2 completed with no violations, 87/562
 INFO:    Rule NW.SE.1 completed with 12 violations, 88/562
 INFO:    Rule NW.SE.3 completed with no violations, 89/562
@@ -495,7 +502,7 @@ INFO:    Rule PHVT.X.2 completed with no violations, 136/562
 INFO:    Rule PHVT.X.3 completed with no violations, 137/562
 INFO:    Rule PHVT.X.4 completed with no violations, 138/562
 INFO:    Rule NLVT.W.1 completed with 1000 violations, 139/562
-INFO:    Rule NLVT.SP.1 completed with 579 violations, 140/562
+INFO:    Rule NLVT.SP.1 completed with 1000 violations, 140/562
 INFO:    Rule NLVT.X.2 completed with 1000 violations, 141/562
 INFO:    Rule NLVT.X.3 completed with 1000 violations, 142/562
 INFO:    Rule NLVT.X.4 completed with no violations, 143/562
@@ -539,7 +546,7 @@ INFO:    Rule POLYR.SE.2_2 completed with no violations, 180/562
 INFO:    Rule POLYR.SE.2_3 completed with no violations, 181/562
 INFO:    Rule POLYR.X.1 completed with no violations, 182/562
 INFO:    Rule NIMP.W.1 completed with no violations, 183/562
-INFO:    Rule NIMP.SP.1 completed with 911 violations, 184/562
+INFO:    Rule NIMP.SP.1 completed with 804 violations, 184/562
 INFO:    Rule NIMP.E.1 completed with no violations, 185/562
 INFO:    Rule NIMP.O.1 completed with no violations, 186/562
 INFO:    Rule NIMP.SE.1 completed with no violations, 187/562
@@ -552,7 +559,7 @@ INFO:    Rule NIMP.EA.1 completed with no violations, 193/562
 INFO:    Rule NIMP.SE.3 completed with no violations, 194/562
 INFO:    Rule NIMP.X.1 completed with no violations, 195/562
 INFO:    Rule PIMP.W.1 completed with no violations, 196/562
-INFO:    Rule PIMP.SP.1 completed with 906 violations, 197/562
+INFO:    Rule PIMP.SP.1 completed with 807 violations, 197/562
 INFO:    Rule PIMP.E.1 completed with no violations, 198/562
 INFO:    Rule PIMP.O.1 completed with no violations, 199/562
 INFO:    Rule PIMP.SE.1 completed with no violations, 200/562
@@ -590,7 +597,7 @@ INFO:    Rule SIPROT.E.3 completed with no violations, 231/562
 INFO:    Rule SIPROT.A.1 completed with no violations, 232/562
 INFO:    Rule SIPROT.SE.4 completed with no violations, 233/562
 INFO:    Rule SIPROT.EA.1 completed with no violations, 234/562
-INFO:    Rule METAL2.E.1_METAL2.E.2 completed with 1000 violations, 235/562
+INFO:    Rule METAL2.E.1_METAL2.E.2 completed with 919 violations, 235/562
 INFO:    Rule METAL3.E.1_METAL3.E.2 completed with no violations, 236/562
 INFO:    Rule METAL4.E.1_METAL4.E.2 completed with no violations, 237/562
 INFO:    Rule METAL5.E.1_METAL5.E.2 completed with no violations, 238/562
@@ -606,7 +613,7 @@ INFO:    Rule METAL2.W.1 completed with no violations, 247/562
 INFO:    Rule METAL3.W.1 completed with no violations, 248/562
 INFO:    Rule METAL4.W.1 completed with no violations, 249/562
 INFO:    Rule METAL5.W.1 completed with no violations, 250/562
-INFO:    Rule METAL6.W.1 completed with 2 violations, 251/562
+INFO:    Rule METAL6.W.1 completed with 1 violations, 251/562
 INFO:    Rule METAL7.W.1 completed with no violations, 252/562
 INFO:    Rule METAL8.W.1 completed with no violations, 253/562
 INFO:    Rule METAL9.W.1 completed with no violations, 254/562
@@ -628,7 +635,7 @@ INFO:    Rule METAL2.SP.1.1 completed with no violations, 269/562
 INFO:    Rule METAL3.SP.1.1 completed with no violations, 270/562
 INFO:    Rule METAL4.SP.1.1 completed with no violations, 271/562
 INFO:    Rule METAL5.SP.1.1 completed with no violations, 272/562
-INFO:    Rule METAL6.SP.1.1 completed with 366 violations, 273/562
+INFO:    Rule METAL6.SP.1.1 completed with 375 violations, 273/562
 INFO:    Rule METAL7.SP.1.1 completed with no violations, 274/562
 INFO:    Rule METAL8.SP.1.1 completed with no violations, 275/562
 INFO:    Rule METAL9.SP.1.1 completed with no violations, 276/562
@@ -730,7 +737,7 @@ INFO:    Rule METAL2.A.1 completed with no violations, 369/562
 INFO:    Rule METAL3.A.1 completed with no violations, 370/562
 INFO:    Rule METAL4.A.1 completed with no violations, 371/562
 INFO:    Rule METAL5.A.1 completed with no violations, 372/562
-INFO:    Rule METAL6.A.1 completed with 1000 violations, 373/562
+INFO:    Rule METAL6.A.1 completed with 956 violations, 373/562
 INFO:    Rule METAL7.A.1 completed with no violations, 374/562
 INFO:    Rule METAL8.A.1 completed with no violations, 375/562
 INFO:    Rule METAL9.A.1 completed with no violations, 376/562
@@ -747,15 +754,15 @@ INFO:    Rule METAL8.EA.1 completed with no violations, 386/562
 INFO:    Rule METAL9.EA.1 completed with no violations, 387/562
 INFO:    Rule METAL10.EA.1 completed with no violations, 388/562
 INFO:    Rule METAL11.EA.1 completed with no violations, 389/562
-INFO:    Rule CMET.S.1 completed with 795 violations, 390/562
-WARNING: 7 polygon result(s) segmented in DRC RuleCheck CMET.S.1.
-WARNING: RuleCheck CMET.S.1 output to GDSII results with maximum polygon vertex count 4179 (more than 200).
+INFO:    Rule CMET.S.1 completed with 796 violations, 390/562
+WARNING: 4 polygon result(s) segmented in DRC RuleCheck CMET.S.1.
+WARNING: RuleCheck CMET.S.1 output to GDSII results with maximum polygon vertex count 4341 (more than 200).
 INFO:    Rule CMET.W.1 completed with 1000 violations, 391/562
 INFO:    Rule CMET.E.1 completed with no violations, 392/562
-INFO:    Rule CMET.E.2 completed with 1 violations, 393/562
-INFO:    Rule CMET.E.4 completed with 1 violations, 394/562
+INFO:    Rule CMET.E.2 completed with no violations, 393/562
+INFO:    Rule CMET.E.4 completed with no violations, 394/562
 INFO:    Rule CMET.E.3 completed with no violations, 395/562
-INFO:    Rule VIA1.W.1 completed with 1000 violations, 396/562
+INFO:    Rule VIA1.W.1 completed with 919 violations, 396/562
 INFO:    Rule VIA1.SP.1 completed with no violations, 397/562
 INFO:    Rule VIA2.W.1 completed with no violations, 398/562
 INFO:    Rule VIA2.SP.1 completed with no violations, 399/562
@@ -776,7 +783,7 @@ INFO:    Rule VIA9.SP.1 completed with no violations, 413/562
 INFO:    Rule VIA10.W.1 completed with 2 violations, 414/562
 INFO:    Rule VIA10.SP.1 completed with no violations, 415/562
 INFO:    Rule VIA1.E.1 completed with 1000 violations, 416/562
-INFO:    Rule VIA1.E.2 completed with 317 violations, 417/562
+INFO:    Rule VIA1.E.2 completed with 310 violations, 417/562
 INFO:    Rule VIA2.E.1 completed with no violations, 418/562
 INFO:    Rule VIA2.E.2 completed with no violations, 419/562
 INFO:    Rule VIA3.E.1 completed with no violations, 420/562
@@ -919,7 +926,7 @@ INFO:    Rule soft_check_17 completed with no violations, 554/562
          Remaining rules: NW.SP.1  NW.SP.2_3  LATCHUP.3  LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
 INFO:    Rule NW.SP.1 completed with 1000 violations, 555/562
          Remaining rules: NW.SP.2_3  LATCHUP.3  LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
-INFO:    Rule NW.SP.2_3 completed with 254 violations, 556/562
+INFO:    Rule NW.SP.2_3 completed with 159 violations, 556/562
          Remaining rules: LATCHUP.3  LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
 INFO:    Rule LATCHUP.3 completed with no violations, 557/562
          Remaining rules: LATCHUP.4  ESD.4  ESD.4_2  ESD.8  ESD.8_2 
@@ -932,24 +939,24 @@ INFO:    Rule ESD.4_2 completed with no violations, 560/562
 INFO:    Rule ESD.8 completed with no violations, 561/562
          Remaining rules: ESD.8_2 
 INFO:    Rule ESD.8_2 completed with no violations, 562/562
-INFO:    Status: Runset 100% complete as of 2026-03-11 15:36:25   Elapsed: 00:00:11
+INFO:    Status: Runset 100% complete as of 2026-03-12 10:31:20   Elapsed: 00:00:11
          Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
               0:    1 /   1            117              16           10
-INFO:	 Status: Finishing as of 2026-03-11 15:36:25   Elapsed: 00:00:11   CPU time[s]: 11
+INFO:	 Status: Finishing as of 2026-03-12 10:31:20   Elapsed: 00:00:11   CPU time[s]: 11
 INFO:    Resource usage by worker at exit:
                   CPU      Elapsed  CPUs       CPU       Peak        Peak engine
          Worker:  time[s]  time[s]  Allocated  usage[%]  Memory[MB]  Memory[MB]
-              0:       10       11          1     92.01         117           16
+              0:       10       11          1     92.83         117           16
          Worker resource usage  summary: Total CPU[s]: 10  Run duration[s]: 11  Max peak memory[MB]: 117
          Worker CPU utilization summary: 10 of 11 available CPU seconds (90.91%) with 1 average available CPU(s)
-INFO:    Generating summary in /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/run/result.sum
+INFO:    Generating summary in /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/run/result.sum
 INFO:    All selected rules completed
-         Total CPU Time                    : 10(s)
+         Total CPU Time                    : 11(s)
          Total Real Time                   : 11(s)
-         Total Original Geometry           : 10639(267848)
+         Total Original Geometry           : 10243(270076)
          Total DRC RuleChecks              : 562
-         Total DRC Results                 : 16351 (56534)
-         ASCII report database is /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/gpu_top_scalar.db
+         Total DRC Results                 : 16200 (57397)
+         ASCII report database is /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/gpu_top_scalar.db
 INFO:    Checking in all SoftShare licenses.
 
-Pegasus finished normally. 2026-03-11 15:36:25
+Pegasus finished normally. 2026-03-12 10:31:20

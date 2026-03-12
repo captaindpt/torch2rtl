@@ -1,5 +1,5 @@
 xrun(64): 25.09-s001: (c) Copyright 1995-2025 Cadence Design Systems, Inc.
-TOOL:	xrun(64)	25.09-s001: Started on Mar 11, 2026 at 15:32:56 EDT
+TOOL:	xrun(64)	25.09-s001: Started on Mar 12, 2026 at 10:27:33 EDT
 xrun
 	-clean
 	-64bit
@@ -14,9 +14,16 @@ xrun
 	-incdir /home/v71349/eda-pilot/examples/gpu_top_scalar
 	-incdir /home/v71349/torch2rtl/rtl
 	-incdir /home/v71349/torch2rtl/tb
-	-l /home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/rtl-sim/xrun.log
+	-l /home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/xrun.log
 	/home/v71349/torch2rtl/rtl/gpu_top_scalar.v
 	/home/v71349/torch2rtl/tb/tb_gpu_inference_scalar.v
+	+dump_vcd
+	+vcd_file=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/gpu_top_scalar_activity.vcd
+
+   User defined plus("+") options:
+	+dump_vcd
+	+vcd_file=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/gpu_top_scalar_activity.vcd
+
 xrun: *N,CLEAN: Removing existing directory ./xcelium.d.
 xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/rtl (No such file or directory).
 xmvlog: *W,NOTIND: unable to access -INCDIR /home/v71349/eda-pilot/tb (No such file or directory).
@@ -63,17 +70,17 @@ xmvlog: *W,SPDUSD: Include directory /home/v71349/eda-pilot given but not used.
 		worklib.gpu_control:v <0x78107ce2>
 			streams:  18, words:  7730
 		worklib.gpu_decoder:v <0x5ea41cea>
-			streams:   1, words:  6667
+			streams:   1, words:  6974
 		worklib.gpu_top_scalar:v <0x39d179a8>
 			streams:   8, words:  1704
-		worklib.tb_gpu_inference_scalar:v <0x0defb485>
-			streams:  12, words: 12352
+		worklib.tb_gpu_inference_scalar:v <0x10797393>
+			streams:  12, words: 13655
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
 		                 Instances  Unique
 		Modules:                 9       9
-		Registers:              48      48
+		Registers:              50      50
 		Scalar wires:           33       -
 		Vectored wires:         29       -
 		Always blocks:          10      10
@@ -88,6 +95,6 @@ xcelium> source /CMC/tools/cadence/XCELIUMMAIN25.09.001_lnx86/tools/xcelium/file
 xcelium> run
 PASS tb_gpu_inference_scalar (5 checks, cycles=4129, fetched=1384)
 Simulation complete via $finish(1) at time 41306 NS + 0
-./tb/tb_gpu_inference_scalar.v:133         $finish;
+./tb/tb_gpu_inference_scalar.v:151         $finish;
 xcelium> exit
-TOOL:	xrun(64)	25.09-s001: Exiting on Mar 11, 2026 at 15:32:58 EDT  (total: 00:00:02)
+TOOL:	xrun(64)	25.09-s001: Exiting on Mar 12, 2026 at 10:27:34 EDT  (total: 00:00:01)

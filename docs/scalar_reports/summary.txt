@@ -1,6 +1,6 @@
 module=gpu_top_scalar
 status=FAILED
-run_dir=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar
+run_dir=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar
 rtl=/home/v71349/torch2rtl/rtl/gpu_top_scalar.v
 sdc=/home/v71349/torch2rtl/constraints/gpu_top_scalar.sdc
 synth_tool=genus
@@ -8,20 +8,27 @@ dc_synth_lib=/CMC/kits/cadence/GPDK045/gsclib045_all_v4.4/gsclib045/timing/slow_
 timing_lib=/CMC/kits/cadence/GPDK045/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib
 pt_requested_lib=/CMC/kits/cadence/GPDK045/gsclib045_all_v4.4/gsclib045/timing/slow_vdd1v0_basicCells.lib
 pt_target_lib=/home/v71349/eda-pilot/runs/digital-flow/libcache/slow_vdd1v0_basicCells_ptsafe.lib
-pt_sdc=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/primetime/gpu_top_scalar_pt.sdc
+pt_sdc=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/primetime/gpu_top_scalar_pt.sdc
+activity_vcd=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/gpu_top_scalar_activity.vcd
+activity_vcd_scope=tb_gpu_inference_scalar.dut
+activity_hinst=
+quantus_corner=typical
+quantus_spef=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/innovus/out/gpu_top_scalar.spef
 tb=/home/v71349/torch2rtl/tb/tb_gpu_inference_scalar.v
-dc_mapped=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/dc/out/gpu_top_scalar_mapped.v
-innovus_def=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/innovus/out/gpu_top_scalar.def
-innovus_postroute=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/innovus/out/gpu_top_scalar_postroute.v
-innovus_gds=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/innovus/out/gpu_top_scalar.gds
-primetime_setup=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/primetime/reports/gpu_top_scalar_setup.rpt
-primetime_hold=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/primetime/reports/gpu_top_scalar_hold.rpt
-primetime_constraints=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/primetime/reports/gpu_top_scalar_constraints.rpt
-pegasus_db=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/gpu_top_scalar.db
+dc_mapped=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/dc/out/gpu_top_scalar_mapped.v
+innovus_def=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/innovus/out/gpu_top_scalar.def
+innovus_postroute=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/innovus/out/gpu_top_scalar_postroute.v
+innovus_gds=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/innovus/out/gpu_top_scalar.gds
+innovus_spef=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/innovus/out/gpu_top_scalar.spef
+primetime_setup=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/primetime/reports/gpu_top_scalar_setup.rpt
+primetime_hold=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/primetime/reports/gpu_top_scalar_hold.rpt
+primetime_constraints=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/primetime/reports/gpu_top_scalar_constraints.rpt
+pegasus_db=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/gpu_top_scalar.db
 
 stage	status	detail
-rtl_sim	PASS	log=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/rtl-sim/xrun.log
-synth	PASS	tool=genus netlist=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/dc/out/gpu_top_scalar_mapped.v
-innovus	PASS	gds=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/innovus/out/gpu_top_scalar.gds
-primetime	PASS	setup=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/primetime/reports/gpu_top_scalar_setup.rpt lib=/home/v71349/eda-pilot/runs/digital-flow/libcache/slow_vdd1v0_basicCells_ptsafe.lib
-pegasus	FAIL	violations_found log=/home/v71349/eda-pilot/runs/digital-flow/20260311_153256_gpu_top_scalar/pegasus/gpu_top_scalar_drc.log
+rtl_sim	PASS	log=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/rtl-sim/xrun.log
+synth	PASS	tool=genus netlist=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/dc/out/gpu_top_scalar_mapped.v
+innovus	PASS	gds=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/innovus/out/gpu_top_scalar.gds
+quantus	FAIL	log=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/quantus/quantus.stdout.log fallback_spef=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/innovus/out/gpu_top_scalar.spef
+primetime	PASS	setup=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/primetime/reports/gpu_top_scalar_setup.rpt lib=/home/v71349/eda-pilot/runs/digital-flow/libcache/slow_vdd1v0_basicCells_ptsafe.lib
+pegasus	FAIL	violations_found log=/home/v71349/eda-pilot/runs/digital-flow/20260312_102733_gpu_top_scalar/pegasus/gpu_top_scalar_drc.log

@@ -52,7 +52,7 @@ Generate or regenerate the demo artifacts:
 
 ```bash
 python3 tools/torch2gpu.py --out-prefix demo/mlp16x16x4
-python3 tools/gpu_asm.py assemble demo/mlp16x16x4.asm demo/mlp16x16x4_program.hex
+python3 tools/gpu_asm.py demo/mlp16x16x4.asm -o demo/mlp16x16x4_program.hex
 ```
 
 Run the inference testbench:
@@ -82,7 +82,7 @@ Example:
 ```bash
 FLOW_RTL=$PWD/rtl/gpu_top.v \
 FLOW_SDC=$PWD/constraints/gpu_top.sdc \
-FLOW_TB=$PWD/tb/tb_gpu_top.v \
+FLOW_TB=$PWD/tb/tb_gpu_inference.v \
 ~/eda-pilot/flows/run_digital_flow.sh gpu_top
 ```
 
@@ -90,16 +90,21 @@ FLOW_TB=$PWD/tb/tb_gpu_top.v \
 
 Current benchmark highlights from `docs/benchmark.md`:
 
-- Genus area: `26494.056`
-- worst setup slack: `1.55 ns`
+- 4-lane SIMD Genus area: `27123.678 um^2`
+- 1-lane scalar Genus area: `7419.006 um^2`
+- worst setup slack: `1.57 ns`
 - worst hold slack: `0.27 ns`
-- estimated max frequency: `118.34 MHz`
-- RTL inference cycles: `6169`
-- estimated SIMD speedup vs scalar: `3.93x`
+- derived max frequency: `118.62 MHz`
+- SIMD RTL inference cycles: `1935`
+- scalar RTL inference cycles: `4129`
+- SIMD latency win on the demo: about `2.10x`
+- scalar energy advantage on the demo: about `3.7x`
 
 ## Constraints
 
 - CMC Cloud only for the validated EDA path
 - headless-first workflow
 - digital backend assumptions target GPDK045
-- GPDK045 DRC is not clean; functional and timing validation are the stronger proof points
+- GPDK045 DRC is not clean; RTL proof and backend timing are stronger evidence than physical closure
+- published backend timing is post-route STA, not extracted-parasitic closure
+- validated compiler path covers quantized two-layer MLP shapes where `inputs` and `hidden` are divisible by `4`; the checked-in demo remains `16 -> 16 -> 4`

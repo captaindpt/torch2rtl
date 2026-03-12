@@ -1,33 +1,33 @@
-Pegasus 23.26-s005 yR5+5JOGoFD41eqkI3/4VA 2026-03-11 16:19:19 3606940 vcl-vm0-159
+Pegasus 23.26-s005 yR5+5JOGoFD41eqkI3/4VA 2026-03-12 10:20:57 3837848 vcl-vm0-159
 Copyright 2024 Cadence Design Systems, Inc.
 All rights reserved worldwide.
 
-INFO:    Command Line Options: -drc -log /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/pegasus/gpu_top_drc.log -run_dir /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/pegasus/run /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/scripts/gpu_top_pegasus_drc.rul
+INFO:    Command Line Options: -drc -log /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/pegasus/gpu_top_drc.log -run_dir /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/pegasus/run /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/scripts/gpu_top_pegasus_drc.rul
 INFO:    Launch host CPU: Model: Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, OS: Rocky Linux release 8.10 (Green Obsidian), Logical cores: 4, Physical cores: 4, Cache: 36608 KB, CPU Speed: 2992.97 MHz
-         Launch host Memory: MemTotal: 15477 MB,  MemFree: 3076 MB,  SwapTotal: 16379 MB,  SwapFree: 16307 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 61 MB
+         Launch host Memory: MemTotal: 15477 MB,  MemFree: 2195 MB,  SwapTotal: 16379 MB,  SwapFree: 16304 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 61 MB
 INFO:    Current path: /home/v71349/torch2rtl
-INFO:    Run directory: /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/pegasus/run
-INFO:    Log directory: /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/pegasus/run/pegasus-1773260359-vcl-vm0-159-3606940
+INFO:    Run directory: /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/pegasus/run
+INFO:    Log directory: /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/pegasus/run/pegasus-1773325257-vcl-vm0-159-3837848
 INFO:    PVL parsing results:
 
-INFO:    See "/home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/pegasus/run/pegasus-1773260359-vcl-vm0-159-3606940/pvl.log" for additional details.
+INFO:    See "/home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/pegasus/run/pegasus-1773325257-vcl-vm0-159-3837848/pvl.log" for additional details.
 
 INFO:    Checking out 1 license(s) of feature: 'Pegasus_DRC' version 23.2
-INFO:    License checkout successful ... 2026-03-11 16:19:24
+INFO:    License checkout successful ... 2026-03-12 10:21:01
 
 INFO:    Checking out 1 license(s) of feature: 'Pegasus_16nm' version 23.2
-INFO:    License checkout successful ... 2026-03-11 16:19:24
+INFO:    License checkout successful ... 2026-03-12 10:21:01
 INFO:    Worker 0 started on host vcl-vm0-159 with 1 cpu(s)
          CPU: Model: Intel(R) Xeon(R) Gold 6248R CPU @ 3.00GHz, OS: Red Hat Enterprise Linux release 8.10 (Ootpa), Logical cores: 4, Physical cores: 4, Cache: 36608 KB, CPU Speed: 2992.97 MHz
-         Memory: MemTotal: 15477 MB,  MemFree: 2836 MB,  SwapTotal: 16379 MB,  SwapFree: 16307 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 61 MB
+         Memory: MemTotal: 15477 MB,  MemFree: 1982 MB,  SwapTotal: 16379 MB,  SwapFree: 16304 MB,  VmallocTotal: 33554431 MB,  VmallocUsed: 61 MB
 
 INFO:    Gdsii input summary
-         File name: /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/innovus/out/gpu_top.gds
-         File size: 14553788
+         File name: /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/innovus/out/gpu_top.gds
+         File size: 14639330
          Version: 5.0
          Library name: DesignLib
-         Last modified: 2026-3-11 16:18:49
-         Last accessed: 2026-3-11 16:18:49
+         Last modified: 2026-3-12 10:20:22
+         Last accessed: 2026-3-12 10:20:22
          Database unit in user units: 0.0005
          Database unit in meters: 5e-10
          Magnification: 1 
@@ -36,6 +36,9 @@ INFO:    Cell Summary:
          ----------------------------------------------------------------------------
              CELL              INSTANCE    GEOMETRY      LABELS        HREF        FREF
          ----------------------------------------------------------------------------
+         CLKBUFX4                     0          71           0          54          54
+         CLKBUFX2                     0          48           0           2           2
+         CLKBUFX3                     0          54           0          11          11
          INVX1                        0          32           0         517         517
          INVX2                        0          41           0          28          28
          INVXL                        0          29           0          63          63
@@ -126,64 +129,64 @@ INFO:    Cell Summary:
          DFFQX2                       0         129           0          31          31
          OAI222XL                     0          74           0           1           1
          MX2X1                        0          68           0          12          12
-         M2_M1_1x2_HV_N               0           4           0       11398       11398
-         M3_M2_2x1_VH_E               0           1           0       13302       13302
-         M2_M1_1x2_HV_S               0           4           0        9262        9262
-         M2_M1_2x1_HV_E               0           4           0        5887        5887
-         M3_M2_2x1_VH_W               0           1           0       10710       10710
-         M3_M2_1x2_VH_N               0           1           0        4396        4396
-         M4_M3_2x1_HV_W               0           1           0        3488        3488
-         M5_M4_2x1_VH_E               0           1           0        1922        1922
-         M4_M3_2x1_HV_E               0           1           0        4892        4892
-         M5_M4_2x1_VH_W               0           1           0        1579        1579
-         M2_M1_2x1_HV_W               0           4           0        5380        5380
-         M2_M1_HH                     0           3           0         209         209
-         M3_M2_1x2_VH_S               0           1           0        3069        3069
-         M2_M1_1x2_VV_S               0           4           0        2004        2004
-         M2_M1_HV                     0           3           0        3491        3491
-         M4_M3_1x2_HV_N               0           1           0        1127        1127
-         M4_M3_1x2_HV_S               0           1           0         950         950
-         M2_M1_1x2_VV_N               0           4           0        2378        2378
-         M2_M1_1x2_VV_C               0           4           0         821         821
-         M3_M2_VH                     0           1           0         578         578
-         M5_M4_1x2_VH_N               0           1           0         348         348
-         M2_M1_2x1_HH_W               0           4           0         550         550
-         M6_M5_1x2_HV_N               0           0           0          95          95
-         M6_M5_2x1_HV_W               0           0           0         341         341
+         M2_M1_HV                     0           3           0        3631        3631
+         M3_M2_2x1_VH_E               0           1           0       13859       13859
+         M3_M2_1x2_VH_N               0           1           0        4290        4290
+         M4_M3_2x1_HV_W               0           1           0        3727        3727
+         M4_M3_2x1_HV_E               0           1           0        5275        5275
+         M2_M1_1x2_HV_N               0           4           0       11213       11213
+         M3_M2_1x2_VH_S               0           1           0        3083        3083
+         M3_M2_2x1_VH_W               0           1           0       10607       10607
+         M2_M1_2x1_HV_W               0           4           0        5386        5386
+         M2_M1_HH                     0           3           0         207         207
+         M4_M3_1x2_HV_N               0           1           0        1214        1214
+         M3_M2_VH                     0           1           0         588         588
+         M4_M3_1x2_HV_S               0           1           0         886         886
+         M2_M1_1x2_VV_S               0           4           0        2012        2012
+         M2_M1_1x2_HV_S               0           4           0        9317        9317
+         M2_M1_1x2_VV_N               0           4           0        2431        2431
+         M2_M1_2x1_HH_W               0           4           0         521         521
+         M2_M1_2x1_HV_E               0           4           0        5991        5991
+         M2_M1_VV                     0           3           0         321         321
+         M5_M4_2x1_VH_W               0           1           0        1678        1678
+         M5_M4_2x1_VH_E               0           1           0        1976        1976
+         M2_M1_1x2_VV_C               0           4           0         815         815
+         M6_M5_2x1_HV_W               0           0           0         336         336
+         M5_M4_1x2_VH_S               0           1           0         236         236
+         M6_M5_1x2_HV_N               0           0           0         124         124
+         M5_M4_1x2_VH_N               0           1           0         324         324
+         M6_M5_1x2_HV_S               0           0           0         128         128
          M6_M5_2x1_HV_E               0           0           0         438         438
-         M5_M4_1x2_VH_S               0           1           0         213         213
-         M4_M3_HH                     0           1           0          17          17
-         M2_M1_VV                     0           3           0         329         329
-         M3_M2_HH                     0           1           0         151         151
-         M6_M5_1x2_HV_S               0           0           0         118         118
-         M2_M1_2x1_HH_E               0           4           0         913         913
-         M2_M1_2x1_HH_C               0           4           0        1195        1195
-         M4_M3_HV                     0           1           0          46          46
-         M2_M1_VH                     0           3           0          34          34
-         M5_M4_HH                     0           1           0           6           6
-         M3_M2_VV                     0           1           0           5           5
+         M4_M3_HH                     0           1           0          19          19
+         M3_M2_HH                     0           1           0         150         150
+         M2_M1_2x1_HH_E               0           4           0         899         899
+         M4_M3_HV                     0           1           0          53          53
+         M7_M6_2x1_VH_E               0           0           0          32          32
+         M7_M6_2x1_VH_W               0           0           0          33          33
+         M2_M1_2x1_HH_C               0           4           0        1199        1199
+         M2_M1_VH                     0           3           0          35          35
+         M3_M2_M_NH                   0           1           0           1           1
          M3_M2_HV                     0           1           0          11          11
-         M7_M6_2x1_VH_E               0           0           0          35          35
-         M7_M6_2x1_VH_W               0           0           0          29          29
-         M7_M6_1x2_VH_N               0           0           0           1           1
-         M5_M4_VH                     0           1           0           3           3
+         M3_M2_VV                     0           1           0           6           6
+         M5_M4_VH                     0           1           0           2           2
          M4_M3_VH                     0           1           0           2           2
-         gpu_top                 102488       27717           0           1           1
+         M5_M4_HH                     0           1           0           3           3
+         gpu_top                 103891       28360           0           1           1
          ----------------------------------------------------------------------------
-         TOTAL CELL = 133;  INSTANCE = 102488;  GEOMETRY = 33744;  LABEL = 0
+         TOTAL CELL = 136;  INSTANCE = 103891;  GEOMETRY = 34561;  LABEL = 0
 
 INFO:    Layer Summary:
          ----------------------------------------------------------------------------
              LAYER                              ID       HPN      HTC        FPN       FTC
          ----------------------------------------------------------------------------
          Bondpad                              1000         0         0         0         0
-         CapMetal                             1001        14         0     43851         0
-         Cont                                 1002      3024         0    375435         0
+         CapMetal                             1001        14         0     43978         0
+         Cont                                 1002      3122         0    378189         0
          ESDdummy                             1003         0         0         0         0
          INDdummy                             1004         0         0         0         0
          M1Resdum                             1005         0         0         0         0
          M2Resdum                             1006         0         0         0         0
-         M3Resdum                             1007        13         0     14593         0
+         M3Resdum                             1007        13         0     15395         0
          M4Resdum                             1008         0         0         0         0
          M5Resdum                             1009         0         0         0         0
          M6Resdum                             1010         0         0         0         0
@@ -192,12 +195,12 @@ INFO:    Layer Summary:
          M9Resdum                             1013         0         0         0         0
          M10Resdum                            1014         0         0         0         0
          M11Resdum                            1015         0         0         0         0
-         Metal1                               1016      1651         0    200011         0
+         Metal1                               1016      1692         0    200990         0
          Metal2                               1017         0         0         0         0
          Metal3                               1018         0         0         0         0
          Metal4                               1019         0         0         0         0
          Metal5                               1020         0         0         0         0
-         Metal6                               1021        22         0     76073         0
+         Metal6                               1021        23         0     76573         0
          Metal7                               1022         0         0         0         0
          Metal8                               1023         0         0         0         0
          Metal9                               1024         0         0         0         0
@@ -206,22 +209,22 @@ INFO:    Layer Summary:
          NPNdummy                             1027         0         0         0         0
          Nburied                              1028         0         0         0         0
          Nhvt                                 1029         0         0         0         0
-         Nimp                                 1030       180         0     21530         0
-         Nlvt                                 1031        24         0     83639         0
-         Nwell                                1032        90         0     10765         0
+         Nimp                                 1030       186         0     21664         0
+         Nlvt                                 1031        24         0     83762         0
+         Nwell                                1032        93         0     10832         0
          Nzvt                                 1033         0         0         0         0
-         Oxide                                1034       392         0     49598         0
+         Oxide                                1034       404         0     49866         0
          Oxide_thk                            1035         0         0         0         0
          PNPdummy                             1036         0         0         0         0
          Phvt                                 1037         0         0         0         0
-         Pimp                                 1038       180         0     21530         0
+         Pimp                                 1038       186         0     21664         0
          Plvt                                 1039         0         0         0         0
-         Poly                                 1040       437         0     61469         0
+         Poly                                 1040       444         0     61657         0
          Psub                                 1041         0         0         0         0
-         ResWdum                              1042     18457         0     18457         0
+         ResWdum                              1042     19082         0     19082         0
          Resdum                               1043         0         0         0         0
          SiProt                               1044         0         0         0         0
-         Via1                                 1045      9260         0      9260         0
+         Via1                                 1045      9278         0      9278         0
          Via2                                 1046         0         0         0         0
          Via3                                 1047         0         0         0         0
          Via4                                 1048         0         0         0         0
@@ -245,7 +248,7 @@ INFO:    Layer Summary:
          poly_conn_text                       1066         0         0         0         0
          ----------------------------------------------------------------------------
 
-INFO:    CHIP EXTENT: 19880 17160 414520 417490
+INFO:    CHIP EXTENT: 19670 19060 414520 417490
 
 
 INFO:    Ports ...
@@ -288,32 +291,34 @@ INFO:    Layer Summary(Texts For DFM_TEXT):
          ----------------------------------------------------------------------------
 
 INFO:    Expanded Cell Summary
-         M6_M5_1x2_HV_N is expanded.
          M6_M5_2x1_HV_W is expanded.
-         M6_M5_2x1_HV_E is expanded.
+         M6_M5_1x2_HV_N is expanded.
          M6_M5_1x2_HV_S is expanded.
+         M6_M5_2x1_HV_E is expanded.
          M7_M6_2x1_VH_E is expanded.
          M7_M6_2x1_VH_W is expanded.
-         M7_M6_1x2_VH_N is expanded.
          M3_M2_1x2_VH_N is expanded.
          M4_M3_2x1_HV_W is expanded.
-         M5_M4_2x1_VH_E is expanded.
          M4_M3_2x1_HV_E is expanded.
-         M5_M4_2x1_VH_W is expanded.
          M3_M2_1x2_VH_S is expanded.
          M4_M3_1x2_HV_N is expanded.
-         M4_M3_1x2_HV_S is expanded.
          M3_M2_VH is expanded.
-         M5_M4_1x2_VH_N is expanded.
+         M4_M3_1x2_HV_S is expanded.
+         M5_M4_2x1_VH_W is expanded.
+         M5_M4_2x1_VH_E is expanded.
          M5_M4_1x2_VH_S is expanded.
+         M5_M4_1x2_VH_N is expanded.
          M4_M3_HH is expanded.
          M3_M2_HH is expanded.
          M4_M3_HV is expanded.
-         M5_M4_HH is expanded.
-         M3_M2_VV is expanded.
+         M3_M2_M_NH is expanded.
          M3_M2_HV is expanded.
+         M3_M2_VV is expanded.
          M5_M4_VH is expanded.
          M4_M3_VH is expanded.
+         M5_M4_HH is expanded.
+         CLKBUFX2 is expanded.
+         CLKBUFX3 is expanded.
          AO21X2 is expanded.
          NAND2X2 is expanded.
          NAND3X4 is expanded.
@@ -361,10 +366,10 @@ INFO:    Expanded Cell Summary
          CLKXOR2X1 is expanded.
          OAI222XL is expanded.
          MX2X1 is expanded.
+         M2_M1_HV is expanded.
          M3_M2_2x1_VH_E is expanded.
          M3_M2_2x1_VH_W is expanded.
          M2_M1_HH is expanded.
-         M2_M1_HV is expanded.
          M2_M1_VV is expanded.
          M2_M1_VH is expanded.
 INFO:    Rule offgrid_check completed with no violations, 1/562
@@ -440,7 +445,7 @@ INFO:    Rule BONDPAD.B.1A_11 completed with no violations, 70/562
 INFO:    Rule soft_check_3 completed with no violations, 71/562
 INFO:    Rule soft_check_6 completed with no violations, 72/562
 INFO:    Rule soft_check_9 completed with no violations, 73/562
-INFO:    Rule soft_check_12 completed with 248 violations, 74/562
+INFO:    Rule soft_check_12 completed with 257 violations, 74/562
 INFO:    Rule soft_check_15 completed with no violations, 75/562
 INFO:    Rule soft_check_18 completed with no violations, 76/562
 INFO:    Rule NBL.W.1 completed with no violations, 77/562
@@ -450,11 +455,11 @@ INFO:    Rule NBL.SE.1 completed with no violations, 80/562
 INFO:    Rule NBL.SE.2 completed with no violations, 81/562
 INFO:    Rule NBL.SE.3 completed with no violations, 82/562
 INFO:    Rule NBL.SE.4 completed with no violations, 83/562
-INFO:    Rule NW.SP.2 completed with 474 violations, 84/562
+INFO:    Rule NW.SP.2 completed with 496 violations, 84/562
 INFO:    Rule NW.SP.2_2 completed with 1000 violations, 85/562
-INFO:    Rule NW.W.1 completed with 885 violations, 86/562
+INFO:    Rule NW.W.1 completed with 858 violations, 86/562
 INFO:    Rule NW.SE.2 completed with no violations, 87/562
-INFO:    Rule NW.SE.1 completed with 75 violations, 88/562
+INFO:    Rule NW.SE.1 completed with 70 violations, 88/562
 INFO:    Rule NW.SE.3 completed with no violations, 89/562
 INFO:    Rule NW.SE.4 completed with no violations, 90/562
 INFO:    Rule NW.E.1 completed with no violations, 91/562
@@ -506,7 +511,7 @@ INFO:    Rule PHVT.X.2 completed with no violations, 136/562
 INFO:    Rule PHVT.X.3 completed with no violations, 137/562
 INFO:    Rule PHVT.X.4 completed with no violations, 138/562
 INFO:    Rule NLVT.W.1 completed with 1000 violations, 139/562
-INFO:    Rule NLVT.SP.1 completed with 13 violations, 140/562
+INFO:    Rule NLVT.SP.1 completed with 14 violations, 140/562
 INFO:    Rule NLVT.X.2 completed with 1000 violations, 141/562
 INFO:    Rule NLVT.X.3 completed with 1000 violations, 142/562
 INFO:    Rule NLVT.X.4 completed with no violations, 143/562
@@ -617,7 +622,7 @@ INFO:    Rule METAL2.W.1 completed with no violations, 247/562
 INFO:    Rule METAL3.W.1 completed with no violations, 248/562
 INFO:    Rule METAL4.W.1 completed with no violations, 249/562
 INFO:    Rule METAL5.W.1 completed with no violations, 250/562
-INFO:    Rule METAL6.W.1 completed with 3 violations, 251/562
+INFO:    Rule METAL6.W.1 completed with 1 violations, 251/562
 INFO:    Rule METAL7.W.1 completed with no violations, 252/562
 INFO:    Rule METAL8.W.1 completed with no violations, 253/562
 INFO:    Rule METAL9.W.1 completed with no violations, 254/562
@@ -759,8 +764,8 @@ INFO:    Rule METAL9.EA.1 completed with no violations, 387/562
 INFO:    Rule METAL10.EA.1 completed with no violations, 388/562
 INFO:    Rule METAL11.EA.1 completed with no violations, 389/562
 INFO:    Rule CMET.S.1 completed with 1000 violations, 390/562
-WARNING: 5 polygon result(s) segmented in DRC RuleCheck CMET.S.1.
-WARNING: RuleCheck CMET.S.1 output to GDSII results with maximum polygon vertex count 3685 (more than 200).
+WARNING: 3 polygon result(s) segmented in DRC RuleCheck CMET.S.1.
+WARNING: RuleCheck CMET.S.1 output to GDSII results with maximum polygon vertex count 4219 (more than 200).
 INFO:    Rule CMET.W.1 completed with 1000 violations, 391/562
 INFO:    Rule CMET.E.1 completed with no violations, 392/562
 INFO:    Rule CMET.E.2 completed with no violations, 393/562
@@ -943,24 +948,24 @@ INFO:    Rule ESD.4_2 completed with no violations, 560/562
 INFO:    Rule ESD.8 completed with no violations, 561/562
          Remaining rules: ESD.8_2 
 INFO:    Rule ESD.8_2 completed with no violations, 562/562
-INFO:    Status: Runset 100% complete as of 2026-03-11 16:20:17   Elapsed: 00:00:53
+INFO:    Status: Runset 100% complete as of 2026-03-12 10:21:56   Elapsed: 00:00:55
          Worker: Active CPUs  Total Mem(MB)  Active Mem(MB)  CPU time(s)
-              0:    1 /   1            130              33           52
-INFO:	 Status: Finishing as of 2026-03-11 16:20:17   Elapsed: 00:00:53   CPU time[s]: 53
+              0:    1 /   1            130              33           54
+INFO:	 Status: Finishing as of 2026-03-12 10:21:56   Elapsed: 00:00:55   CPU time[s]: 55
 INFO:    Resource usage by worker at exit:
                   CPU      Elapsed  CPUs       CPU       Peak        Peak engine
          Worker:  time[s]  time[s]  Allocated  usage[%]  Memory[MB]  Memory[MB]
-              0:       52       53          1     98.24         130           33
-         Worker resource usage  summary: Total CPU[s]: 52  Run duration[s]: 53  Max peak memory[MB]: 130
-         Worker CPU utilization summary: 52 of 53 available CPU seconds (98.11%) with 1 average available CPU(s)
-INFO:    Generating summary in /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/pegasus/run/result.sum
+              0:       54       55          1     98.20         130           33
+         Worker resource usage  summary: Total CPU[s]: 54  Run duration[s]: 55  Max peak memory[MB]: 130
+         Worker CPU utilization summary: 54 of 55 available CPU seconds (98.18%) with 1 average available CPU(s)
+INFO:    Generating summary in /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/pegasus/run/result.sum
 INFO:    All selected rules completed
-         Total CPU Time                    : 53(s)
-         Total Real Time                   : 54(s)
-         Total Original Geometry           : 33744(986211)
+         Total CPU Time                    : 55(s)
+         Total Real Time                   : 56(s)
+         Total Original Geometry           : 34561(992930)
          Total DRC RuleChecks              : 562
-         Total DRC Results                 : 19699 (184378)
-         ASCII report database is /home/v71349/eda-pilot/runs/digital-flow/20260311_160810_gpu_top/pegasus/gpu_top.db
+         Total DRC Results                 : 19697 (184124)
+         ASCII report database is /home/v71349/eda-pilot/runs/digital-flow/20260312_100917_gpu_top/pegasus/gpu_top.db
 INFO:    Checking in all SoftShare licenses.
 
-Pegasus finished normally. 2026-03-11 16:20:17
+Pegasus finished normally. 2026-03-12 10:21:56
